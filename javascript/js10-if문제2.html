@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js10-if문제2</title>
+</head>
+
+<body>
+  <script>
+    /* 문제2: 한 지원자가 우리회사에 지원을 했다. 지원자가 사용가능한 스킬은 배열에 제공이 된다. JavaScript와 JQuery 둘 다 할줄 안다면 "합격!" Javascript와 React둘 중 하나만 할 줄 안다면 "예비", 두 스킬이 없다면 "탈락"을 출력하기 */
+
+    let skills = ["HTML", "CSS", "JavaScript", "jQuery"];
+
+    if(skills.includes("JavaScript") && skills.includes("jQuery")){
+      console.log("합격!");
+    } else if(skills.include("JavaScript") || skills.includes("React")){
+      console.log("예비");
+    } else {
+      console.log("탈락!");
+    };
+  </script>
+</body>
+
+</html>

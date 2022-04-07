@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js10-if문제1</title>
+</head>
+
+<body>
+  <script>
+  /* 
+  문제 1: "평균점수를 입력해주세요" 평균점수를 입력받아서
+  -> 출력값: "100점의 학점은? A입니다."라고 메세지창을 띄운다.
+  -> 범위외의 숫자를 입력하는 경우는 "잘못된 범위의 숫자입니다." 경고창 띄우기
+  */
+
+  let average = prompt("평균점수를 입력해주세요","0");
+  // let grade;
+
+  if(average >= 90 && average <= 100){
+    alert(`${average}점의 학점은? A입니다.`); // grade="A";
+  } else if(average >= 80 && average < 90){
+    alert(`${average}점의 학점은? B입니다.`); // grade="B";
+  } else if(average >= 70 && average < 80){
+    alert(`${average}점의 학점은? C입니다.`);
+  } else if(average < 70){
+    alert(`${average}점의 학점은? D입니다.`);
+  } else {
+    alert("잘못된 범위의 숫자입니다.");
+  }
+
+  // alert(`${average}점의 학점은? ${grade}입니다`);
+  </script>
+</body>
+
+</html>

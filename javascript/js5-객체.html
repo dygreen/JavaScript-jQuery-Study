@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js5-객체</title>
+</head>
+
+<body>
+  <script>
+    /* 객체를 생성하는 방법
+    (1)let person = new Object(); -> 생성자 방식
+    (2)let person = {}; // 객체리터럴(주로 사용하는 방법)
+    */
+
+    let person = {
+      //key : "value" // 객체 프로퍼티
+      key1: "value",
+      key2: 123456,
+      key3: true,
+      key4: undefined,
+      key5: [1,2,3],
+      key6: function(){}
+    };
+
+    console.log(person);
+    console.log(person.key1);
+
+    let patient = {
+      name: "jimin",
+      age: 17,
+      disease: "cold"
+    };
+
+    console.log(patient);
+    console.log(patient.name);
+    console.log(patient.age);
+    console.log(patient["age"]); //괄호표기법을 사용할 때는 반드시 ""문자열 형태로 써야 함 -> ""를 붙이지 않으면 변수로 인식함
+    patient.name="jk";
+    patient["age"]=25;
+    console.log(patient);
+
+    let patientList = [{name:"jimin", age:13}, {name:"jk", age:25}, {name:"jhop", age: 40}];
+    console.log(patientList);
+    console.log("첫번째 환자는:", patientList[0]);
+    console.log("첫번째 환자의 나이는?", patientList[0]["age"]);
+    console.log("두번째 환자의 이름은?", patientList[1].name);
+  </script>
+</body>
+
+</html>

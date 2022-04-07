@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js7-if/else문</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    if/else문: 조건을 만족하면 실행문1, 만족하지 않으면 실행문2
+    if(조건식){
+      실행문1;
+    }else{
+      실행문2;
+    }
+    */
+
+    let num = prompt("당신이 좋아하는 숫자는?", "0"); //prompt에서는 숫자를 입력해도 문자로 바뀌어서 변수에 저장됨
+    if(num%2 == 0){ //암시적 형변환으로 수식에 의해 다시 숫자로 바뀜
+      console.log("당신이 좋아하는 숫자는 짝수입니다.");
+    }else{
+      console.log("당신이 좋아하는 숫자는 홀수입니다.");
+    }
+  </script>
+</body>
+
+</html>

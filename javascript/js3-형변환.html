@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js3-형변환</title>
+</head>
+
+<body>
+  <script>
+    /* 
+   암시적 형변환: 자바스크립트에 의해 자동으로 형변환이 일어나는 것
+   명시적 형변환: 개발자가 직접 스크립트를 이용해서 명시해서 형변환이 일어나는 것
+   */
+
+    //  숫자를 문자로 형변환
+    // (1)암시적 형변환을 이용한 방법 -> 문자를 더해서 숫자로 자동변환
+    let test1 = 100;
+    let result1 = test1 + ""; /* 숫자에 문자를 더하면 문자가 됨(100 = 문자) */
+    console.log("result1 = " + result1);
+
+    // (2)String()을 이용한 방법(string, tostring=문자로 변환하는 명령어(method)(기능은 같으나 형식이 다른 것))
+    let test2 = 100;
+    let result2 = String(test2);
+    console.log("result2 = " + result2);
+
+    // (3)toString()을 이용한 방법
+    let test3 = 100;
+    let result3 = test3.toString();
+    console.log("result3 = " + result3);
+
+
+    //  문자를 숫자로 형변환
+    // (1)parseFloat()-실수형, parseInt()-정수형으로 바꿈 
+    let test4 = "100.50";
+    let result4 = parseFloat(test4) + 150 + parseInt("20.25"); /* 100.50+150+20=270.5 */
+    console.log("result4 = " + result4);
+
+    // (2)Number()-정수형,실수형 모두
+    let test5 = "100.50"
+    let result5 = Number(test5) + 150 + Number("20.25"); /* 100.50+150+20.25=270.75 */
+    console.log("result5 = " + result5);
+  </script>
+</body>
+
+</html>

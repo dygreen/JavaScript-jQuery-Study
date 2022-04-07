@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js6-if문</title>
+</head>
+
+<body>
+  <script>
+    /* if문: 조건을 만족할 때만 실행문을 실행한다.
+    if(조건식){
+      실행문;
+    }
+    -> 다음값이 조건식에 입력되면 false로 반환하지만, 그 밖에 모든 값은 true로 인식된다.
+    0, null,""(빈문자), undefined -> false
+    */
+
+    let min = prompt("당신의 통화량은 몇분인가요?","0");
+    if(min > 60){
+      console.log("많이 사용하는 편이네요!");
+    };
+
+    let userName = prompt("방문자의 이름은?","");
+    if(userName){
+      console.log(`${userName}님 반갑습니다! 방문을 환영합니다.`); //백틱방식(ES6)
+      // console.log(userName + '님 반갑습니다! 방문을 환영합니다.'); 문자결합연산자 방식
+    }
+
+  </script>
+</body>
+
+</html>
