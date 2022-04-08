@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js15-함수문제</title>
+</head>
+
+<body>
+  <script>
+    /* 문제1: "안녕 내 이름은 제시카야"라는 문장을 프린트하는 함수 'greet'를 만드시오 */
+
+    function greet(){
+      console.log("안녕 내 이름은 제시카야");
+    }
+
+    greet();
+
+    /* 문제2: 이름을 매개변수로 전달받아 다양한 이름을 프린트할 수 있게 함수를 수정하시오 예)"안녕 내 이름은 에밀리야", "안녕 내 이름은 할리야" */
+
+    function greet2(name){
+      console.log("안녕 내 이름은 "+name+"야");
+    }
+
+    greet2("에밀리");
+    
+
+    /* 문제3: 위의 문장에서 마지막에 "하하하" 값을 반환해서 출력하시오. */
+    function greet3(name){
+      console.log("안녕 내 이름은 "+name+"야!");
+      return "하하하";
+    }
+
+    let result1 = greet3("제시카");
+    console.log(result1);
+  </script>
+</body>
+
+</html>

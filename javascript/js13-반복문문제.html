@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js13-반복문 문제</title>
+</head>
+
+<body>
+  <script>
+    /* 문제 1: 1부터 100까지 더하는 for문을 만들고 결과를 출력하시오. */
+    let sum=0;
+    for(let k=1; k<=100; k++){
+      sum+=k; //sum=sum+k;
+    }
+    console.log(sum);
+
+    /* 문제 2: 1부터 100까지 홀수만 출력하자 */
+    for(let j=1; j<=100; j++){
+      if(j%2 != 0){
+        console.log(j);
+      }
+    }
+
+    for(let h=1; h<=100; h+=2){ //h=h+2;
+      console.log(h);
+    }
+
+    /* 문제 3: 구구단 출력 */
+    for(let b=2; b<10; b++){ // 2단에서 9단까지 반복
+      console.log(b+"단"); // 2단부터 9단까지 단수 출력
+      for(result=1; result<10; result++){ //각 단별로 1~9까지 곱하는 수 반복
+        console.log(b+"×"+result+"="+b*result);
+      }
+    }
+    
+    // for(aa=2; aa<10; aa++){
+    //   console.log(aa+"단 입니다.");
+    //   for(bb=1; bb<10; bb++){
+    //     console.log(aa+"×"+bb+"="+aa*bb);
+    //   }
+    // }
+
+
+    /* 문제 4: 1부터 50까지 369결과(369가 들어가는 숫자는 "짝"을 출력)를 프린트하자 39->짝짝 (3하고 9를 따로 문자로 인식함) */
+    for(let i=1; i<=50; i++){
+      // console.log(i);
+      let stringValue = i.toString(); //숫자를 문자로 바꿈
+      let result = ""; //결과출력
+
+      for(let c=0; c<stringValue.length; c++){ //c는 인덱스로 첫번째 값을 가져와서 그게 3,6,9 중에 하나랑 일치하면 (0,1) (5가 들어오면 c=0이됨)
+        if(stringValue[c] === "3" || stringValue[c] === "6" || stringValue[c] === "9"){
+          result += "짝"; //result=result+짝
+          //짝이 항상 한개가 아니므로 두번째 턴에 짝이 기존의 짝에 추가로 이어서 짝짝
+        }
+      }
+      console.log(result.length>0 ? result : i);
+      // result에 글자가 하나 이상 들어가 있으면 "짝"을 출력하고, 글자가 아무것도 없으면 숫자인 i를 출력
+    }
+  </script>
+</body>
+
+</html>
