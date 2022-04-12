@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<title>17-animation</title>
+<style>
+.box1, .box2, .box3, .box4{
+	width:300px;
+	height:300px;
+	background:red;
+	display:none;
+}
+
+dl{
+	width:300px;
+	margin-left:10px;
+}
+dl dt{
+	background:#7cadb6;
+	cursor:pointer; 
+}
+dl dd{
+	border:1px solid #7cadb6;
+	height:250px;
+	margin:0;
+	display:none;
+}
+
+img{display:none;}
+
+.two div{
+	background:blue;
+	width:50px;
+	height:50px;
+	margin:10px;   
+	display:none;         
+} 
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	$(".bt1").click(function(){
+		$(".box1").show("slow");
+	});
+	/* 
+	=================================================
+	애니메이션효과의 속도: "slow" "normal(기본값)" "fast"
+	밀리초단위로 지정(1초=1000밀리초)
+
+	$("div").show(1000);
+	=================================================
+	*/
+
+	$(".bt2").click(function(){
+		$(".box2").show("slow",function(){ //콜백함수
+			$(this).css("background","blue");
+		});
+	});
+	/* 
+	===============================================
+	$(셀렉터).show(속도, 콜백함수)
+	콜백함수라는 것은 애니메이션 효과가 끝난 후 이어서 실행되는 명령
+	===============================================
+	*/
+
+	$(".show").click(function(){
+		$(".box3").show("slow");
+	});
+	$(".hide").click(function(){
+		$(".box3").hide("slow");
+	});
+	$(".bt4").click(function(){
+		$(".box3").toggle("slow");
+	});
+
+/* 	$("dt").click(function(){
+		$("dd").slideToggle("slow");
+	}); */
+	$("dt").click(function(){
+		if( $("dd").css("display") == "none" ){
+			$("dd").slideDown("slow");
+		}else{
+			$("dd").slideUp("slow");
+		}
+	});
+
+	$(".fadein").click(function(){
+		$(".ph1 img").fadeIn("slow");
+	});
+	$(".fadeout").click(function(){
+		$(".ph1 img").fadeOut("slow");
+	});
+	$(".fadetoggle").click(function(){
+		$(".ph1 img").fadeToggle("slow");
+	});
+
+	$(".fade100").click(function(){
+		$(".ph2 img").fadeTo("slow",1); //불투명도 100%
+	});
+	$(".fade50").click(function(){
+		$(".ph2 img").fadeTo("slow",0.5); //불투명도 50%
+	});
+	$(".fade0").click(function(){
+		$(".ph2 img").fadeTo("slow",0); //불투명도 0%
+	});
+
+	$(".two button").click(function(){
+		// delay()를 이용하여 fadeIn() 실행 후, 3초 뒤 slideUp() 실행
+		$(".two>div:first").fadeIn("slow").delay(3000).slideUp("fast");
+
+		// 지연시간 없이 연속해서 fadeIn(), slideUp() 실행
+		$(".two>div:last").fadeIn("slow").slideUp("fast");
+	});
+});
+</script>
+</head>
+<body>
+
+<h3>애니메이션:show()</h3>
+<input type="button" value="표시" class="bt1">
+<div class="box1"></div>
+
+<h3>애니메이션:show()에 콜백함수 지정하기</h3>
+<input type="button" value="표시" class="bt2">
+<div class="box2"></div>
+
+<h3>애니메이션:show()/hide()</h3>
+<input type="button" value="표시" class="show">
+<input type="button" value="비표시" class="hide">
+<div class="box3"></div>
+
+<h3>애니메이션:toggle()</h3>
+<input type="button" value="표시/비표시" class="bt4">
+<div class="box4"></div>
+
+<h3>애니메이션:slideUp()/slideDown()/slideToggle()</h3>
+<dl>
+<dt>슬라이딩 효과로 표시상태를 변경한다</dt>
+	<dd>
+		slideDown()/slideUp()는 show()/hide() 와는 
+		다른 슬라이딩 애니메이션 효과로 표시/비표시를 변경하는 명령입니다.
+	</dd>
+</dl>
+
+<h3>애니메이션:fadeIn()/fadeOut()/fadeToggle( )</h3>
+<input type="button" value="표시" class="fadein">
+<input type="button" value="비표시" class="fadeout">
+<input type="button" value="표시/비표시" class="fadetoggle">
+<p class="ph1"><img src="image/flower.jpg" alt="flower"></p>
+
+<h3>애니메이션:fadeTo()</h3>
+<input type="button" value="표시" class="fade100">
+<input type="button" value="반투명" class="fade50">
+<input type="button" value="비표시" class="fade0">
+<p class="ph2"><img src="image/flower.jpg" alt="flower"></p>
+
+<div class="two">
+	<button>시작</button>    
+	<div></div><div></div>
+</div>
+
+</body>
+</html>
+
