@@ -1,0 +1,270 @@
+@import url(common.css);
+
+body{background:#eee;}
+
+#header{
+	width:100%;
+	height:287px;
+	background:url(../image/sub_topvisual.jpg) no-repeat center top;
+	position:relative;  
+	z-index:1000;  /*메뉴가 맨 위에 오게 함*/ 	
+}
+
+/*=============================== 검색,로고,유틸메뉴*/
+
+.top{width:100%;}
+.top_in{
+	width:800px;
+	height:90px;
+	margin:0 auto;
+	padding:30px 0;
+	box-sizing:border-box;
+}
+
+/* 검색 */
+.search{
+	float:left;
+	width:200px;
+	/*background:yellow;*/
+}
+.search .text{   /*input박스*/
+	height:20px;
+	background:transparent;  /*배경색 투명하게*/
+	border-bottom:solid 1px #fff;
+	border-style:none none solid none;   /*상,우,하,좌*/
+	color:#fff;  /*placeholder 글자색 변경 ->익스,파이어폭스에서만 적용*/
+	text-indent:5px;
+}
+::-webkit-input-placeholder{color:#fff;}
+/*접두사를 반드시 붙여야 적용됨-크롬에서 적용*/
+input:focus{outline:none;} /* input박스 클릭시 생기는 테두리 없애기 */
+
+.search i{   /*아이콘폰트*/
+	color:#fff;
+	vertical-align:top;
+}
+
+
+/* 로고 */
+
+.logo{
+	float:left;
+	width:430px;
+	/*background:skyblue;*/
+}
+.logo h1{text-align:center;}
+
+
+/* 유틸메뉴 */
+
+.util{
+	float:right;
+	width:170px;
+	margin-top:10px;
+	/*background:pink;*/
+}
+.util .util_menu li{
+	float:left;
+	border-right:1px solid #fff;
+	padding:0 5px;
+}
+.util .util_menu li:last-child{border-right:none;}
+.util .util_menu li a{
+	display:block;
+	color:#fff;
+	font-size:13px;
+}
+.util .util_menu li a:hover{color:#ccc;}
+
+
+/*=============================== 탑메뉴*/
+
+.gnb{
+	width:100%;
+	height:50px;
+	border-top:1px solid #989a9a;
+	border-bottom:1px solid #989a9a;
+	text-align:center;
+	/*background:pink;*/
+}
+
+
+/* ///// 주메뉴 ///// */
+
+.gnbMenu{
+	width:752px;
+	margin:0 auto;
+}
+.gnb>.gnbMenu{display:inline-block;}
+.gnb>.gnbMenu>li{
+	float:left;
+	width:150px;
+	position:relative;
+}
+.gnb>.gnbMenu>li>a{
+	display:block;
+	color:#fff;
+	font-size:15px;
+	font-weight:600;
+	line-height:50px;
+	text-align:center;
+}
+.gnb>.gnbMenu>li:hover>a{color:#23b5e0;}
+
+.gnb>.gnbMenu>li span{  /*삼각형아래로*/
+  	width:0;
+  	height:0;
+  	border-left:5px solid transparent;
+  	border-right:5px solid transparent;
+  	border-top:5px solid #fff;
+  	position:absolute;
+	top:20px;
+	right:15px;
+}
+.gnb>.gnbMenu>li:hover span{border-top:5px solid #23b5e0;}
+
+
+/* ///// 서브메뉴 ///// */
+
+.gnbMenu>li .smenu{
+	display:none;
+	position:absolute;
+	top:100%; /*주메뉴가 끝나는 지점에 바로 위치*/
+	z-index:1000;
+	padding-top:10px; 
+	border-left:solid 1px #e8e8e8;
+	width:150px;
+	height:200px;
+	box-sizing:border-box;
+}
+.last{border-right:solid 1px #e8e8e8;}
+
+.gnb>.gnbMenu>li ul li{
+	padding:10px 0px;
+	text-align:center;
+	transition:all 0.4s;
+}
+.gnb>.gnbMenu>li ul li:hover{background:#dbe4ea;}
+.gnb>.gnbMenu>li ul li a{color:#666;}
+.gnb>.gnbMenu>li ul li:hover a{color:#000;}
+
+
+.bg_box{   /*서브배경박스*/
+	display:none;
+	position:absolute;
+	top:140px; 
+	width:100%;
+	height:200px; 
+	background:#fff;
+	/*background:url(../image/sub_bgimg.jpg) no-repeat 30% top #1f4492; */	
+}
+
+
+/* ////////////// 스크롤바 내릴때 나오는 탑메뉴 fix */
+
+.logo_fix{
+	position:absolute;
+	top:2px;
+	left:30px;
+}
+
+.gnb_fix{
+	width:100%;
+	height:50px;
+	border-top:1px solid #989a9a;
+	border-bottom:1px solid #989a9a;
+	background:rgba(51,102,204,0.6);
+	text-align:center;
+	position:fixed;  /*스크롤바 내리면 나오는 위치+고정*/
+	top:0px;
+	left:0px;
+	z-index:10000;
+	margin-top:-140px;   /*안보이게 위로 올려놓음->jQuery에서 스크롤 움직일때 나오게 함*/
+	/*background:pink;*/
+}
+
+
+/* ///// 주메뉴 ///// */
+
+.gnbMenu_fix{
+	width:752px;
+	margin:0 auto;
+}
+.gnb_fix>.gnbMenu_fix{display:inline-block;}
+.gnb_fix>.gnbMenu_fix>li{
+	float:left;
+	width:150px;
+	position:relative;
+}
+.gnb_fix>.gnbMenu_fix>li>a{
+	display:block;
+	color:#fff;
+	font-size:15px;
+	font-weight:600;
+	line-height:50px;
+	text-align:center;
+}
+.gnb_fix>.gnbMenu_fix>li:hover>a{color:#23b5e0;}
+
+.gnb_fix>.gnbMenu_fix>li span{  /*삼각형아래로*/
+  	width:0;
+  	height:0;
+  	border-left:5px solid transparent;
+  	border-right:5px solid transparent;
+  	border-top:5px solid #fff;
+  	position:absolute;
+	top:20px;
+	right:15px;
+}
+.gnb_fix>.gnbMenu_fix>li:hover span{border-top:5px solid #23b5e0;}
+
+
+/* ///// 서브메뉴 ///// */
+
+.gnbMenu_fix>li .smenu_fix{
+	display:none;
+	position:absolute;
+	top:100%; /*주메뉴가 끝나는 지점에 바로 위치*/
+	z-index:1000;
+	padding-top:10px; 
+	border-left:solid 1px #e8e8e8;
+	width:150px;
+	height:200px;
+	box-sizing:border-box;
+}
+.last{border-right:solid 1px #e8e8e8;}
+
+.gnb_fix>.gnbMenu_fix>li ul li{
+	padding:10px 0px;
+	text-align:center;
+	transition:all 0.4s;
+}
+.gnb_fix>.gnbMenu_fix>li ul li:hover{background:#dbe4ea;}
+.gnb_fix>.gnbMenu_fix>li ul li a{color:#666;}
+.gnb_fix>.gnbMenu_fix>li ul li:hover a{color:#000;}
+
+
+.bg_box_fix{   /*서브배경박스*/
+	display:none;
+	position:absolute;
+	top:50px; 
+	width:100%;
+	height:200px; 
+	background:#fff;
+	/*background:url(../image/sub_bgimg.jpg) no-repeat 30% top #1f4492; */	
+}
+
+
+#contents{
+	width:1000px;
+	height:1500px;
+	margin:0 auto;
+	background:skyblue;
+}
+#footer{
+	width:1000px;
+	height:100px;
+	margin:0 auto;
+	background:gray;
+}
+

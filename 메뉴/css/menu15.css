@@ -1,0 +1,116 @@
+@import url(common.css);
+
+body{background:#eee;}
+
+#header{
+	width:100%;
+	height:100%;
+	background:url(../image/main_visual.jpg) no-repeat;
+	background-size:cover;
+}
+.gnb{
+	width:100%;
+	height:70px;
+	background:rgba(255,255,255,0.75);
+	/*text-align:center;*/	
+}
+.gnb_in{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	z-index:100;  
+}
+
+.gnb_in h1{
+	float:left;	
+	margin-right:50px;
+	padding-top:10px;
+}
+
+
+/* ///// 주메뉴 ///// */
+
+.gnb_title_menu{display:inline-block;float:right;}
+
+.gnb_title_menu li{  
+	float:left;
+	padding:0 10px;
+}
+
+.gnb_title_menu li>a{
+	display:block;
+	color:#666;
+	font-size:14px;
+	font-weight:600;
+	line-height:70px;
+	text-align:right;
+}
+.gnb_title_menu>li:hover>a{
+	color:#000;
+	font-weight:bold;
+}
+
+
+
+
+/* ///// 서브메뉴 ///// */
+.gnb_list{
+	display:none;
+	position:absolute;
+	top:70px;
+	left:0;
+	padding-top:10px;
+}
+.gnb_list>.gnb_list_sub{
+	overflow:hidden;
+	width:1000px;
+}
+
+/*.gnb_list>.gnb_list_sub:hover{background:#afcbe1;}
+
+.gnb_list>.gnb_list_sub:hover>.sub_title{border-left:solid 10px #cc0000;}
+
+제이쿼리과 같이 적용하면 충돌되어서 안됨-- >제이쿼리로 다 적용함
+*/
+
+.gnb_list>.gnb_list_sub li{float:left;}
+.gnb_list>.gnb_list_sub .sub_title{
+	border-left:solid 10px #123a5f;
+	width:140px;
+	padding-left:20px;
+	height:40px;
+	line-height:40px;
+}
+
+.gnb_list>.gnb_list_sub .sub_title a{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+.gnb_list>.gnb_list_sub .sub_title a:hover{color:#000;}
+
+
+
+.gnb_list>.gnb_list_sub li:not(.sub_title){   /*서브메뉴 제목부분*/
+	border-right:solid 1px #666;
+	margin:10px 0;
+	padding:0 20px;
+}
+.gnb_list>.gnb_list_sub li a{
+	display:block;
+	font-size:13px;
+	color:#666;
+}
+.gnb_list>.gnb_list_sub li a:hover{color:#000;}
+
+
+.bg_box{   /*서브배경박스*/
+	display:none;
+	width:100%;
+	height:300px; 
+	background:rgba(255,255,255,0.75);
+	position:absolute;
+	top:70px;
+}
+

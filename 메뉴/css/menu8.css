@@ -1,0 +1,115 @@
+@import url(common.css);
+
+body{background:#ccc;}
+
+header{
+	width:100%;
+	height:50px; /*★★★높이를 지정하면 헤더 다음의 컨텐츠위로 풀다운메뉴나옴
+	높이를 지정하지않으면 헤더 다음의 컨텐츠가 같이 내려감*/
+	background:#23a4dc;
+	text-align:center;	
+	position:relative;  
+	z-index:100;  /*메뉴가 맨 위에 오게 함*/ 	
+	border-bottom:3px solid #0c7fb6;
+	box-sizing:border-box;
+	/*box-sizing속성사용->주메뉴 오버시에 서브메뉴가 나올때 헤더아래 가로선이 사라지는것을 수정하기 위함*/ 
+}
+
+/* //// 주메뉴 //// */
+
+.top_nav{
+	width:705px;
+	height:50px;
+	margin:0 auto;
+	position:relative; /*위치설정을 잡기위해  "position:relative;" 을 적용*/
+	text-align:center;
+	/*background:yellow;  */
+}
+
+/*.topmenu{display:inline-block;}*/
+.topmenu>li{    
+	float:left;
+	width:175px;
+	height:50px;
+	/*border-left:1px solid #40b6b9;
+->부모에 box-sizing속성을 적용하면 헤더아래 가로선까지 구분선이 내려와서 삭제함*/
+}
+/*.topmenu>li:last-child{border-right:1px solid #40b6b9;}*/
+
+.topmenu>li>a{
+	display:block;
+	color:#fff;
+	height:47px;
+	line-height:50px;
+	font-size:16px;
+	border-left:1px solid #40b6b9;
+}
+.tline{border-right:1px solid #40b6b9;} /*마지막메뉴 오른쪽선 추가*/
+
+/* //// 서브메뉴 //// */
+
+.topmenu>li>.smenu{
+	display:none;
+	position:absolute;
+	top:100%;
+	height:200px;
+	border:solid #dbdbdb;
+	border-width:0 1px;  
+}
+
+.topmenu>li>.smenu li{width:175px;}
+
+.topmenu>li>.smenu li a{
+	display:block;
+	color:#555;
+	font-size:13px;
+	line-height:16px;
+    padding:5px;
+	text-align:center;
+	font-weight:normal;	
+}
+.topmenu>li>.smenu li a:hover{text-decoration:underline;}
+
+.bg_box{   /*100%서브배경박스*/
+	display:none;
+	width:100%;
+	height:200px; 
+	background:#fff;
+	border-bottom:3px solid #0c7fb6;	
+}
+
+
+
+#visual{
+	width:1000px;
+	height:400px;
+	background:pink;
+	margin:0 auto;
+}
+
+#contents{
+	width:1000px;
+	height:500px;
+	background:skyblue;
+	margin:0 auto;
+}
+#footer{
+	width:1000px;
+	height:200px;
+	background:gray;
+	margin:0 auto;
+}
+
+
+/*
+★★★헤더의 탑메뉴에서 주메뉴 오버시에 서브메뉴 또는 서브박스가 나올때 그 다음 컨텐츠가 내려갈때 해결방법
+
+(1)부모에 높이를 설정한다.
+-> header{height:70px;}
+
+(2)부모에  "position:relative;" 속성을 적용하고,
+자식에는 "position:absolute;"를 적용한다.
+단, 자식의 경우에는 상황에 따라 "position:relative;"를 적용할 수 있다.
+
+*/
+

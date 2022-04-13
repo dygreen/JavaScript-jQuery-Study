@@ -1,0 +1,88 @@
+@import url(common.css);
+
+body{background:#e8e8e8;}
+
+#header{
+	width:100%;
+	height:75px;
+	background:#fff;
+}
+.header_in{
+	width:1200px;	
+	margin:0 auto;
+}
+
+/* //// 탑메뉴 //// */
+
+h1 {
+	float:left;
+	padding-top:15px;
+	margin-right:50px;
+}
+
+.top_nav{
+	width:1000px;
+	height:75px;
+	position:relative;  
+	z-index:100;	
+	/*밑에 비주얼과 오버시 메뉴가 겹칠때 메뉴가 맨위에 오게 하기위함*/
+}
+
+
+/* 주메뉴 */
+
+.topmenu>li{    
+	float:left;
+	width:130px;
+	font-size:15px;
+	font-weight:600;
+	line-height:70px;
+	text-align:center;
+}
+.topmenu>li:hover{border-bottom:solid 5px #005bac;}
+.topmenu>li>a{color:#333;}
+.topmenu>li:hover>a{color:#005bac;}
+
+
+/* 서브메뉴 */
+
+.topmenu>li>.smenu{
+	display:none;
+	position:absolute;
+	top:100%;
+	margin-top:1px; 
+	height:270px; /*bg_box의 높이와 동일하게...*/
+	border-left:solid 1px #e8e8e8;
+}
+.topmenu>li>.smenu:last-child{border-right:solid 1px #e8e8e8;}
+.smenu li{width:130px;}
+.smenu li a{  
+	display:block;
+	color:#333;
+	font-size:13px;
+	line-height:16px;
+    padding:5px;
+	text-align:center;
+	font-weight:normal;	
+}
+.smenu li a:hover{color:#005bac;}
+
+.bg_box{   /*서브배경박스*/
+	display:none;
+	width:100%;
+	height:270px;
+	background:#fff;
+	border:solid #0c57af;
+	border-width:1px 0;
+}
+
+
+/* 서브왼쪽배경이미지 */	
+.topimg ul li{  /*모든 이미지를 한 위치에 겹쳐놓음*/
+	display:none;
+	position:absolute;
+	top:125px;
+	left:10px;
+	z-index:1000;
+}
+

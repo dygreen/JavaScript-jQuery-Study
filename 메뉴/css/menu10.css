@@ -1,0 +1,96 @@
+@import url(common.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@font-face{
+	font-family:NotoSansM;
+	src:url(../../../../style/font/notokr-medium.eot);
+    src:local('※'), url(../../../../style/font/notokr-medium.woff) format('woff');
+}
+body{font-family: NotoSansM, sans-serif;}
+header{
+    width:1200px;
+    height:120px;
+    margin:0 auto;
+/*    background-color: antiquewhite;*/
+}
+
+
+/*메인메뉴*/
+
+nav{
+    width:100%;
+    background:#37272a;
+    height:83px;
+
+}
+.navbox{
+    width:1000px;
+	margin:0 auto;
+    position:relative;
+}
+
+.menu{
+    line-height:84px;
+    margin-left:25px;
+}
+.menu>li{
+	float:left;
+	padding:0 60px;
+}
+.menu>li>a{
+    color:azure;
+    font-size:17px;
+    font-weight:500;    
+}
+.menu>li:hover>a{
+    color:#0093d0;
+    font-weight:900;
+}
+
+
+
+/*서브메뉴*/
+
+.sub{
+    width:1200px;
+    position:absolute;
+    top:83px;
+    left:-5px;
+    z-index:100;
+    display:none;
+}
+.sub>ul{line-height:20px;}
+.sub>ul>li{
+    width:140px;
+    height:190px;
+    padding:30px;
+    float: left;
+}
+.sub>ul>li:hover{background-color:#f8d3ad;}   
+.sub>ul>li span{
+    font-size:18px;
+    font-weight:700;
+    color:#0093d0;
+}
+.sub>ul>li>ul{margin-top:15px;}
+.sub>ul>li>ul li a{
+    display:block;
+    padding-bottom:7px;
+    font-size:14px;
+    color:#444;
+}
+.sub>ul>li>ul li a:hover{
+    color:#0093d0;
+    font-weight:600;
+}
+
+.bg_box{
+    width:100%;
+    height:250px;
+    background-color:rgba(253, 241, 227,0.9);
+    position:relative;
+    bottom:3px;
+    z-index:90;
+    display:none;
+}
+

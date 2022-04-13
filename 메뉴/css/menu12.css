@@ -1,0 +1,35 @@
+@import url(common.css);
+
+.gnb{
+	width:220px;
+	margin:0 auto;
+}
+
+.gnb>li{background:#e1e1e1;}
+
+.gnb>li>a{   /*주메뉴 */ 
+        display:block;
+        height:35px;
+        line-height:35px;
+        color:#555;
+        font-size:13px;
+        font-weight:bold;
+        padding:5px 20px;
+        border-bottom:1px solid #fff;
+}
+.gnb>li>a:hover{  /*주메뉴 over*/
+        color:#fff;
+        background:#4167ba;
+}
+.gnb>li>ul{display:none;}/*서브메뉴 숨김*/
+.gnb>li>ul>li{
+	height:30px;
+	background:#d6e4fd;
+}
+.gnb>li>ul>li>a{  /*서브메뉴 */ 
+	display:block;
+	font-size:12px;
+	color:#000;
+	padding:5px 20px;
+}
+.gnb>li>ul>li>a:hover{font-weight:bold;} /*서브메뉴 over*/

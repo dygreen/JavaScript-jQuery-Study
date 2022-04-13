@@ -1,0 +1,58 @@
+@import url(common.css);
+
+.allmenu_box{
+	width:195px;  /*전체메뉴 이미지사이즈*/
+	height:38px;
+}
+
+/*메뉴바*/
+.allmenu h3{
+	position:absolute;
+	width:195px;
+	height:38px;
+	background:url(../image/menubar.jpg) no-repeat;
+	cursor:pointer;
+	z-index:100;		
+}
+
+/*버튼을 클릭했을때 바뀌는 전체버튼이미지->jquery에서 불러냄*/
+.allmenu .mclose{  
+	position:absolute;
+	width:195px;
+	height:38px;
+	background:url(../image/menubar_click.jpg) no-repeat;
+	cursor:pointer;
+}
+
+
+/* 버튼클릭시 나오는 메뉴부분 */
+.allmenu div{
+	display:none;
+	position:absolute;
+	background:#fff;
+	width:193px;
+	height:562px;
+	border:1px solid #800f34;
+	border-top:none;
+	margin-top:38px;
+}	
+.allmenu div ul li{
+	line-height:17px;
+	padding-left:10px;
+}
+.allmenu div ul li a{
+	color:#800f34;
+	line-height:31px;
+	margin-left:20px;
+	padding:5px;
+}
+.allmenu div ul li a:hover{
+	margin-left:25px;
+	font-weight:bold;
+}
+.allmenu div ul .tt{
+	font-weight:bold;
+	background:#880f34;
+	padding:10px 20px;
+	color:#fff;
+}

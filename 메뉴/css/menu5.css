@@ -1,0 +1,73 @@
+@import url(common.css);
+
+body{background:#eee;}
+
+header{  /*메뉴바 100% 설정*/
+	width:100%;
+	height:50px;
+	background:#2b2f3a;
+	text-align:center;	
+}
+.gnb{
+	width:1000px;
+	height:50px;
+	margin:0 auto;
+    /* background:pink; */
+}
+.gnb h1{  /*로고*/
+	float:left;	
+	margin:3px 50px 0 0;
+}
+
+
+/* ///// 주메뉴 ///// */
+.gnbMenu{float:right;}
+.gnbMenu>li{
+	float:left;
+	width:150px;
+	position:relative; /*비어있는 span(삼각형)의 위치기준 부모설정*/
+	transition: all 0.5s;
+}
+.gnbMenu>li:hover{background:#dbe4ea;}
+.gnbMenu>li>a{
+	display:block;
+	color:#7a8189;
+	font-size:15px;
+	font-weight:600;
+	line-height:50px;
+}
+.gnbMenu>li:hover>a{color:#333;}
+
+
+/* ///// 서브메뉴 ///// */
+.gnbMenu>li ul{
+	display:none;   /*서브메뉴 감추기->jQuery에서 보이게 함*/
+    position:absolute;
+    top:100%; /*주메뉴가 끝나는 지점에 바로 위치*/
+    z-index:200;
+}
+.gnbMenu>li ul li{
+    float:left;
+	padding:15px 20px;
+}
+.gnbMenu>li ul li a{
+	color:#666;
+	font-size:13px;
+}
+.gnbMenu>li ul li:hover{background:#ccc;}
+
+/*서브메뉴 가로폭,나오는위치값-<부모영역을 벗어나서 위치를 잡기 위함*/
+.gnbMenu>li>ul.sub1{left:-50px;width:421px;}
+.gnbMenu>li>ul.sub2{left:10px;width:474px;}
+.gnbMenu>li>ul.sub3{left:30px;width:295px;}
+.gnbMenu>li>ul.sub4{left:5px;width:250px;}
+.gnbMenu>li>ul.sub5{left:5px;width:191px;}
+
+
+.bg_box{   /*100%서브배경박스->jQuery에서 보이게 함*/
+	display:none;
+	width:100%;
+	height:45px; 
+	background:#dbe4ea;
+}
+

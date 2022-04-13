@@ -1,0 +1,76 @@
+@import url(common.css);
+
+body{background:#eee;}
+
+header{  /*메뉴바 100% 설정*/
+	width:100%;
+	height:50px;
+	background:#2b2f3a;
+	text-align:center;
+    position:relative;  
+	z-index:100;  /*메뉴가 맨 위에 오게 함*/ 		
+}
+.gnb{
+	width:1000px;
+	height:50px;
+	margin:0 auto;
+    /* background:pink; */
+}
+.gnb h1{  /*로고*/
+	float:left;	
+	margin:3px 50px 0 0;
+}
+
+
+/* ///// 주메뉴 ///// */
+.gnbMenu{float:right;}
+.gnbMenu>li{
+	float:left;
+	width:150px;
+	position:relative; /*비어있는 span(삼각형)의 위치기준 부모설정*/
+}
+.gnbMenu>li>a{
+	display:block;
+	color:#7a8189;
+	font-size:15px;
+	font-weight:600;
+	line-height:50px;
+}
+.gnbMenu>li:hover>a{color:#fff;}
+
+.gnbMenu>li span{  /*삼각형아래로*/
+    width:0;
+    height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #7a8189;
+    position:absolute;
+	top:22px;
+	right:7px;
+}
+.gnbMenu>li:hover span{border-top:5px solid #fff;}
+
+
+/* ///// 서브메뉴 ///// */
+.gnbMenu>li .smenu{  /*모든 서브메뉴*/
+    display:none;
+	position:absolute;
+	top:100%; /*주메뉴가 끝나는 지점에 바로 위치*/
+	padding-top:10px; 
+	border-left:solid 1px #e8e8e8;
+	width:150px;
+	height:200px;
+	background:#fff;
+}
+.gnbMenu>li .first{border-left:none;}
+/*일반구조선택자 first-child 는 연속된 목록에서 찾기 때문에 클래스를 만들어서 적용함*/
+
+.gnbMenu>li ul li{
+	padding:10px 0px;
+    transition:all 0.4s;
+}
+.gnbMenu>li ul li a{
+	color:#666;
+	font-size:13px;
+}
+.gnbMenu>li ul li:hover{background:#dbe4ea;}
