@@ -21,4 +21,5 @@
 * animation
 * animate
 
-### jQuery를 사용한 여러 형태의 메뉴바 
+### jQuery를 사용하여 여러 형태의 메뉴바 제작
+
