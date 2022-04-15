@@ -1,0 +1,118 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Poppins&display=swap');
+
+/* font-family:'Poppins', sans-serif;
+font-family:'Noto Sans KR', sans-serif;    */
+
+body {
+  background: #ffc900;
+}
+
+#slideShow {
+  position: relative;
+  overflow: hidden;
+  width: 1920px;
+  height: 1050px;
+  margin: 0 auto;
+}
+
+#slideShow .slide ul {
+  position: absolute;
+  width: 5760px;
+  /*이미지의 총가로길이(1920*3)*/
+}
+
+#slideShow .slide ul li {
+  float: left;
+}
+
+#slideShow .slide ul li {
+  width: 1920px;
+  height: 1050px;
+}
+
+#slideShow .slide ul .m1 {
+  background: url(../image/section0_slide1.png) no-repeat;
+}
+
+#slideShow .slide ul .m2 {
+  background: url(../image/section0_slide2.png) no-repeat;
+}
+
+#slideShow .slide ul .m3 {
+  background: url(../image/section0_slide3.png) no-repeat;
+}
+
+
+/*좌우버튼*/
+#slideShow .side_btn .pre {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 31px;
+  height: 58px;
+  background: url(../image/slide_btn_l.png) no-repeat;
+  cursor: pointer;
+}
+
+#slideShow .side_btn .nex {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 31px;
+  height: 58px;
+  background: url(../image/slide_btn_r.png) no-repeat;
+  cursor: pointer;
+}
+
+
+/*텍스트 설정*/
+.slide_text {
+  margin-top: 270px;
+  margin-left: 390px;
+}
+
+.slide_text h3 {
+  font-family: 'Poppins', sans-serif;
+  font-family: arial;
+  font-size: 25px;
+  color: #333;
+  line-height: 0;
+  margin: 18px -5px;
+}
+
+.slide_text h1 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  color: #333;
+  line-height: 70px;
+  margin: -8px;
+  letter-spacing: -2px;
+}
+
+.slide_text h1:nth-child(2) {
+  color: #d90000;
+}
+
+.slide_text h2 {
+  font-weight: normal;
+  color: #333;
+  margin: 13px 0;
+}
+
+.slide_text [type=button] {
+  width: 130px;
+  height: 45px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #d90000;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  z-index: 999;
+}

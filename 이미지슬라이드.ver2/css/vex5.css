@@ -1,0 +1,99 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Poppins&display=swap');
+
+/* font-family:'Poppins', sans-serif;
+font-family:'Noto Sans KR', sans-serif;  */
+
+
+body{background:#ffc900;}
+
+#slideShow{
+  width: 1920px; 
+  height: 1050px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 슬라이드 이미지 */
+.slide ul{
+  position: absolute;
+  width: 5760px;
+}
+
+.slide ul li{
+  width:1920px;
+  height: 1050px;
+  float: left;
+}
+
+.slide ul li.m1{background:url(../image/section0_slide1.png) no-repeat;
+background-size: cover;}
+.slide ul li.m2{background:url(../image/section0_slide2.png) no-repeat;}
+.slide ul li.m3{background:url(../image/section0_slide3.png) no-repeat;}
+
+/* 텍스트 */
+.slide_text{width: 1200px; margin: 300px auto;}
+
+.slide_text h3{
+  font-family:'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+} 
+
+.slide_text .h1{
+  font-family:'Noto Sans KR', sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  color: #d90000;
+}
+
+.slide_text .h1_2{
+  font-family:'Noto Sans KR', sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  color: #333;
+}
+
+.slide_text h2{
+  font-size: 18px;
+  font-weight: 100px;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* 자세히보기 버튼 */
+input{
+  background: #d90000;
+  padding: 18px 40px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+/* 좌우버튼 */
+.side_btn .pre{
+  position: absolute;
+  top: 400px;
+  left: 30px;
+  width: 65px;
+  height: 65px;
+  margin-left: 150px;
+  background: url(../image/slide_btn_l.png) no-repeat;
+  cursor: pointer;
+}
+
+.side_btn .nex{
+  position: absolute;
+  top: 400px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  margin-right: 150px;
+  background: url(../image/slide_btn_r.png) no-repeat;
+  cursor: pointer;
+}
+
