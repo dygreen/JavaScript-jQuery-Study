@@ -1,0 +1,72 @@
+@import url(common.css);
+
+/*body{background:#ebebeb;}*/
+
+#gallery {
+	width: 1000px;
+	height: 753px;
+	background: #fff;
+	position: relative;
+}
+
+.largeImg li {
+	display: none;
+	position: absolute;
+	top: 21px;
+	left: 28px;
+}
+
+.largeImg li:first-child {
+	display: block;
+}
+
+.thumbs {
+	position: absolute;
+	top: 30px;
+	left: 80px;
+}
+
+.thumbs li {
+	float: left;
+	margin-right: 10px;
+	opacity: 0.3;
+}
+
+.thumbs li:first-child {
+	opacity: 1;
+}
+
+.thumbs li a img {
+	width: 75px;
+	height: 57px;
+}
+
+.left_btn {
+	position: absolute;
+	left: 0;
+	top: 340px;
+}
+
+.right_btn {
+	position: absolute;
+	right: 0;
+	top: 340px;
+}
+
+/*이미지별 텍스트*/
+
+.imgText li {
+	display: none;
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+}
+
+.imgText li:first-child {
+	display: block;
+}
+
+.imgText li strong {
+	color: #fff;
+	font-size: 55px;
+}
