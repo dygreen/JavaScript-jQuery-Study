@@ -1,0 +1,82 @@
+@import url(common.css);
+
+.box1,
+.box2,
+.box3,
+.box4 {
+	width: 176px;
+	height: 176px;
+	overflow: hidden;
+	margin: 20px;
+}
+
+.box2 ul li:first-child {
+	margin-top: -176px;
+}
+
+.box3 ul {
+	width: 352px;
+}
+
+/*176+176=352(총가로폭)*/
+.box3 ul li {
+	float: left;
+}
+
+
+.box4 ul {
+	width: 352px;
+}
+
+/*176+176=352(총가로폭)*/
+.box4 ul li {
+	float: left;
+}
+
+.box4 ul li:first-child {
+	margin-left: -176px;
+}
+
+
+/*box5-일부분 투명창 올리기*/
+
+.box5 ul li {
+	float: left;
+	margin: 0 20px;
+	width: 194px;
+	height: 233px;
+	overflow: hidden;
+}
+
+.box5 ul li .text {
+	position: relative;
+	z-index: 100;
+	/*박스가 보이게 위로 올림*/
+	width: 194px;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.6);
+	/* background:#000;
+	opacity:0.6; 
+	-->opacity를 사용하면 텍스트까지 불투명해짐
+	*/
+	box-sizing: border-box;
+}
+
+.box5 ul li .text h3 {
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.box5 ul li .text p {
+	color: #fff;
+	font-size: 12px;
+	padding-top: 10px;
+}
+
+.box5 ul li .text .more {
+	color: #fff;
+	font-size: 10px;
+	text-align: right;
+}

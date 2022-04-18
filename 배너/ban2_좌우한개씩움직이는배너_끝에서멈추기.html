@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<title>좌우한개씩움직이는배너+끝에서멈추기</title>
+<!--좌우로 이동시 각각 맨 마지막이미지에서는 버튼동작 멈추기-->
+<link rel="stylesheet" href="css/ban2.css">
+</head>
+<body>
+<div class="banner"> 
+	<div class="ban">
+		<ul>
+			<li><a href="#"><img src="image/event_01.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_02.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_03.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_04.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_05.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_06.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_07.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_08.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_09.jpg" alt=""></a></li>
+			<li><a href="#"><img src="image/event_10.jpg" alt=""></a></li>
+		</ul>
+	</div>
+	<!--★★★ 좌우 버튼을 클릭할때 이미지가 끝나면 더이상 움직이지 않게 STOP하기 위해서는
+		이어지는 동작이 필요없으므로 맨 뒤의 이미지를 맨앞으로 위치할 필요는 없음-->
+	
+	<div class="ban_btn">
+		<span class="ban_left"><span class="indent">이전글</span></span>
+		<span class="ban_right"><span class="indent">다음글</span></span>
+	</div>
+</div>
+
+<!-- Script Source -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/ban2.js"></script>
+</body>
+</html>

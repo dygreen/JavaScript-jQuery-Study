@@ -1,0 +1,60 @@
+@import url(common.css);
+
+.news_box{
+	width:550px;
+	height:180px;
+	margin:0 auto;
+	padding-top:30px;
+	padding-bottom:20px;
+	/*background:yellow; */
+}
+.news{
+	width:500px;
+	height:135px;
+	position:relative;
+}
+.news ul li{
+	display:none;
+	padding-right:40px;
+	position:absolute;
+	top:40px;
+	left:0px;
+}
+.news ul li.news1{display:block;}
+
+.news ul li .img1{
+	float:left;
+	padding-right:20px;
+}
+
+.news ul li .title1 a{
+	font-size:14px;
+	color:#000;
+}
+.news ul li .text1{
+	margin-top:20px;
+}
+.news ul li .text1 a{
+	font-size:11px;
+	color:#999;
+	font-family:돋움;
+	font-weight:bold;
+}
+
+
+/*이동버튼*/
+.nbtn{
+	position:absolute;
+	top:115px;
+	right:0;
+	cursor:pointer;
+}
+.nbtn span{
+	display:inline-block;
+	width:20px;
+	height:20px;
+}
+.nbtn .nb_left{background:url(../image/main-news-left_02.png) no-repeat;}
+.nbtn .nb_right{background:url(../image/main-news-right_02.png) no-repeat;}
+.nbtn .nb_left:hover{background:url(../image/main-news-left_01.png) no-repeat;}
+.nbtn .nb_right:hover{background:url(../image/main-news-right_01.png) no-repeat;}

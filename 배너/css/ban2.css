@@ -1,0 +1,54 @@
+@import url(common.css);
+
+.banner{  /*배너전체영역*/
+	position:relative;
+	width:1150px;
+	height:150px;
+	/*background:yellow;*/	 
+}
+
+.banner .ban{   /*슬라이드영역*/
+	width:1000px; /*보여주는 폭을 줄이고자 할때 가로폭을 맞춰서 줄여줌*/
+	height:115px;
+	overflow:hidden;
+	padding-top:35px;
+	margin-left:75px;
+	/*background:orange;	 */
+}
+
+.banner .ban ul{
+	width:2550px;  /* 총길이=230*10(가로폭)+25*10(여백) */
+	position:relative;
+	/*★★★ left:-255px;  -> 이어지는 동작이 없으므로 필요없는 소스임 */	
+}
+.banner .ban ul li{
+	float:left;
+	margin-right:25px;
+	width:230px;   /*이미지가로크기*/
+	height:111px;  /*이미지세로크기*/
+	border-bottom:2px solid #333;
+}
+.banner ul li:hover{border-color:#cc0000;}
+
+/*좌우버튼*/
+.ban_left{
+	position:absolute;
+	top:60px;
+	left:10px;
+	cursor:pointer;
+}
+.ban_right{
+	position:absolute;
+	top:60px;
+	right:10px;
+	cursor:pointer;
+}
+.ban_btn span{
+	display:inline-block;
+	width:47px;
+	height:55px;	
+}
+.ban_btn .ban_left{background:url(../image/lbtn.png) no-repeat;}
+.ban_btn .ban_right{background:url(../image/rbtn.png) no-repeat;}
+/*.ban_btn .ban_left:hover{background:url(../image/main-event-left_01.png) no-repeat;}
+.ban_btn .ban_right:hover{background:url(../image/main-event-right_01.png) no-repeat;}*/

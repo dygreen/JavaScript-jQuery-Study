@@ -1,0 +1,28 @@
+@import url(common.css);
+
+.banner{
+	position:relative;
+	width:324px;
+	height:400px;
+	background:url(../image/mv_left.jpg)no-repeat;		
+}
+.banner ul{width:150px;}
+.banner ul li{float:left;}
+.banner ul li:first-child{margin-left:-75px;}
+
+.banner .box1{
+	position:absolute;
+	left:236px;
+	top:90px;	
+	width:75px;
+	height:75px;
+	overflow:hidden;	
+}
+.banner .box2{
+	position:absolute;
+	left:236px;
+	top:285px;	
+	width:75px;
+	height:75px;
+	overflow:hidden;	
+}
