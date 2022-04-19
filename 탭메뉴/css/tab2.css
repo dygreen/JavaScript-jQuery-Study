@@ -1,0 +1,31 @@
+@import url(common.css);
+
+body{background:#252422;}
+
+dl{
+	width:800px;
+	margin:50px auto;
+}
+dt{   /*탭제목*/
+	line-height:35px;
+	font-size:large;
+	text-indent:32px;
+	font-weight:bold;
+	color:#fff;
+	height:35px;
+	background:url(../image/background.jpg);
+}
+
+dt.selected{  /*제목선택시->jquery에서 불러냄*/
+	background:url(../image/background_selected.jpg);
+	cursor:default;
+	color:#000;
+}
+dd{
+	height:300px;
+	background:#d4d0c8;
+}
+dd p{
+	text-indent:16px;
+	padding:20px;
+}

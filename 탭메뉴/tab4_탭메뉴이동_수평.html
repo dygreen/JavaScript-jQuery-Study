@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<title>탭메뉴 이동-가로</title>
+<link rel="stylesheet" href="css/tab4.css">
+</head>
+<body>
+
+<div id="tabmenu">
+    <!--탭메뉴-->
+    <div class="tab-header">
+        <h2>Pick up work</h2>
+        <div class="tab_box"> <!--(수정) ul과 span을 감싸는 부모를 하나 더 만든다.-->
+            <ul class="tab">
+                <li><a href="#tab1" class="active">Work 01</a></li>
+                <li><a href="#tab2">Work 02</a></li>
+                <li><a href="#tab3">Work 03</a></li>
+                <li><a href="#tab4">Work 04</a></li>
+                <li><a href="#tab5">Work 05</a></li>              
+            </ul>
+            <span class="tab-highlight"></span> <!-- (수정)ul밖으로 위치 이동 ,움직이는 탭메뉴 선택되는 화살표모양박스-->
+        </div>        
+    </div>
+    
+    <!--탭메뉴 클릭시 바뀌는 하단내용-->
+    <div class="tab-content">
+        <ul class="panel">
+            <li id="tab1">
+                <img src="image/work-1.jpg" alt="work1">
+                <div class="content">
+                    <h3 class="title">Work 01</h3>
+                    <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                    <span class="read-more"><a href="#">Read more</a></span>
+                </div>
+            </li>
+            <li id="tab2">
+                <img src="image/work-2.jpg" alt="work2">
+                <div class="content">
+                    <h3 class="title">Work 02</h3>
+                    <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                    <span class="read-more"><a href="#">Read more</a></span>
+                </div>
+            </li>
+            <li id="tab3">
+                <img src="image/work-3.jpg" alt="work3">
+                <div class="content">
+                    <h3 class="title">Work 03</h3>
+                    <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                    <span class="read-more"><a href="#">Read more</a></span>
+                </div>
+            </li>
+            <li id="tab4">
+                <img src="image/work-4.jpg" alt="work4">
+                <div class="content">
+                    <h3 class="title">Work 04</h3>
+                    <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                    <span class="read-more"><a href="#">Read more</a></span>
+                </div>
+            </li>
+            <li id="tab5">
+                <img src="image/work-5.jpg" alt="work5">
+                <div class="content">
+                    <h3 class="title">Work 05</h3>
+                    <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                    <span class="read-more"><a href="#">Read more</a></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Script Source -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/tab4.js"></script>
+</body>
+</html>

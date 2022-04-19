@@ -1,0 +1,114 @@
+@import url(common.css);
+
+#tabmenu{
+    width:960px;
+    height:500px;
+    background:#f3f6f7;
+    margin:30px auto;
+    position:relative;
+}
+.tab-header{
+    width:200px;
+    float:left;
+    position:relative;
+}
+.tab-content{
+    width:700px;
+    float:left;
+    margin-top:30px;
+    margin-left:25px;
+}
+.tab_box{
+    width:160px;
+    height:280px;
+    position:relative;
+    top:50px;
+    left:30px;
+}
+.tab li{
+    width:160px;
+    height:70px;
+    box-sizing:border-box;
+    border-bottom:1px solid #ccc;
+    position:relative;
+    /*background:pink;*/
+}
+.tab li a{
+    display:block;
+    color:#000;
+    font-size:17px;
+    line-height:70px;
+    text-align:center;
+    letter-spacing:1px; 
+    position:relative;
+    z-index:100;  
+}
+
+.tab li a.active{color:#fff;}  /*1번째 선택된 글자색 */
+
+.tab-highlight{  /*현재 선택된 탭메뉴*/
+    background:#000;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width: 160px;
+    height:70px;  
+}
+
+.tab-highlight:after{  /*박스아래 삼각형모양*/
+    background:url(../image/arrow2.png) no-repeat 0 0;
+    content:"";
+    position:absolute;
+    right:-12px;
+    top:35%;
+    z-index:10;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #000;
+    border-bottom:10px solid transparent;
+}
+ 
+.panel li{
+    width:670px;
+    height:400px;
+    padding:20px;
+    position:relative;
+    top:0;
+    left:0;
+    display:none;   
+}
+.panel li:first-child{display:block;}
+
+.panel #tab1{background:#12578f;}
+.panel #tab2{background:#64416e;}
+.panel #tab3{background:#397741;}
+.panel #tab4{background:#8f7341;}
+.tab-content .content {
+    color:rgb(255, 255, 255);
+    text-shadow:0 0 2px rgba(0, 0, 0, 0.9);
+    width:350px;
+    margin:auto;  
+    position:absolute;
+}
+
+
+.content .title {
+    font-size:50px;
+    font-weight:normal;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+.content .description {
+    font-size:12px;
+    line-height:22px;
+}
+.content .read-more{
+    font-size:14px;
+    text-transform:uppercase;
+    display:inline-block;
+    padding:3px 16px;
+    margin-top:24px;
+    border:2px solid #fff;
+}
+.content .read-more a{color:#fff;}

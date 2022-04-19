@@ -1,0 +1,31 @@
+@import url(common.css);
+
+#tabmenu{
+	width:600px;
+	margin:50px auto;
+}
+.tab li{
+	width:150px;
+	height:50px;
+	float:left;
+	background:#fff;
+	color:#333;
+	font-size: 17px;
+	line-height:50px;
+	text-align:center;
+	font-weight:bold;
+}
+.tab li.selected{  /*현재 선택된 탭메뉴*/
+	background:#009ac8;
+	color:#fff;
+	font-weight:bold;
+}
+
+.panel{
+	clear:both;  /*float문제해결*/
+	background:#009ac8;
+	padding:20px;
+	color:#fff;
+	font-size:14px;
+	line-height:25px;
+}

@@ -1,0 +1,142 @@
+@import url(common.css);
+
+/*Tab Menu ---------------------------------------*/
+
+#tabmenu{
+    width:100%;
+}
+.tab-header{
+    width:1000px;
+    height:70px;
+    background:#fff;
+    margin:0 auto;
+    position:relative;
+}
+.tab-header h2{
+    width:400px;
+    float:left;
+    text-transform:uppercase;
+    font-size:30px;
+    font-weight:400;
+    line-height:70px;
+}
+.tab_box{  /*.tab 에서 .tab_box 로 수정*/
+    float:right;
+    position:relative;
+    width:600px;
+    height:70px;
+    /*background:yellow;*/
+}
+.tab li{
+    width:120px; /*->jQuery에서 탭메뉴 움직이는 거리*/
+    height:70px;
+    box-sizing:border-box;
+    float:left;
+    border-left:1px solid #ccc;
+    position:relative;
+}
+.tab li:last-of-type{border-right:1px solid #ccc;}
+.tab li a{
+    display:block;
+    color:#000;
+    font-size:17px;
+    line-height:70px;
+    text-align:center;
+    letter-spacing:1px; 
+    position:relative;
+    z-index:100;  
+}
+
+.tab li a.active{color:#fff;} /*1번째 선택된 글자색 */
+
+.tab-highlight{  /*현재 선택된 탭메뉴->옆으로 이동하는 박스*/
+    background:#ff9900; 
+    height:100%;
+    position:absolute;
+    width:120px;
+    left:0px;
+}
+/*삼각형모양 이미지로 했을때.....
+.tab-highlight:after{
+    background:url(../image/arrow.png) no-repeat 0 0;
+    content:"";
+    position:absolute;
+    width:34px;
+    height:13px;
+    bottom:-13px;
+    left:50%;
+    margin-left:-17px;  
+    z-index:10;
+}*/
+
+
+.tab-highlight:after{   /*삼각형모양*/
+    content:"";
+    position:absolute;
+    bottom:-13px;
+    left:55%;
+    margin-left:-17px;  
+    z-index:10;
+    width:0;
+    height:0;
+    border-left:12px solid transparent;
+    border-right:12px solid transparent;
+    border-top:15px solid #ff9900;
+}
+
+
+/*Tab Mneu Contents ---------------------------------------*/
+
+.tab-content{
+    width:100%;
+    background:#000;
+}
+.panel{
+    clear:both;
+    width:1600px;
+    height:400px;
+    margin:0 auto;
+} 
+.panel li{
+    width:1600px;
+    height:400px;
+    position:relative;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.panel li:first-child{display:block;}
+
+.tab-content .content {
+    color:rgb(255, 255, 255);
+    text-shadow:0 0 2px rgba(0, 0, 0, 0.9);
+    width:350px;
+    margin:auto;  
+    position:absolute;
+}
+#tab1 .content{top:30px;left:980px;}
+#tab2 .content{top:90px;left:70px;}
+#tab3 .content{top:90px;left:70px;}
+#tab4 .content{top:90px;left:70px;}
+#tab5 .content{top:30px;left:980px;}
+
+.content .title {
+    font-size:50px;
+    font-weight:normal;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+.content .description {
+    font-size:12px;
+    line-height:22px;
+}
+.content .read-more{
+    font-size:14px;
+    text-transform:uppercase;
+    display:inline-block;
+    padding:3px 16px;
+    margin-top:24px;
+    border:2px solid #fff;
+}
+.content .read-more a{color:#fff;}

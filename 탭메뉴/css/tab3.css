@@ -1,0 +1,66 @@
+@import url(common.css);
+
+header dl{
+	width:1000px;
+	height:500px;
+	margin:0 auto;
+}
+header dl dt{  /*탭부분*/
+	position:relative;
+	width:50px;
+	height:500px;
+	border-left:1px solid #000;
+    float:left;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+header dl dt:nth-of-type(1){background:#f9a107;}
+header dl dt:nth-of-type(2){background:#d44877;}
+header dl dt:nth-of-type(3){background:#7a32b8;}
+header dl dt:nth-of-type(4){background:#45868c;}
+
+
+header dl dt a{  
+    position: absolute;
+    top:300px;
+    color:#000;
+    transform:rotate(-90deg);
+    transform-origin:left top;
+    font-size:15px;
+    letter-spacing:2px;
+    padding-top:15px;
+}
+dt.selected a{  /*제목선택시->jquery에서 불러냄*/
+	cursor:default;
+	color:#fff;
+	font-weight:bold;
+}
+
+
+header dl dd{   /*각 탭의 내용*/
+	width:800px;
+    height:500px;
+	display:none;
+    float:left;
+    position:relative;
+    overflow:auto;
+}
+header dl dd:first-of-type{display:block;}
+
+.number{   /*page 번호*/
+ 	font-size:50px;
+ 	font-weight: bold;
+ 	font-family: serif;
+ 	padding:20px;
+}
+
+header dl dd p{
+	padding:20px;
+	line-height:20px;
+	font-size:14px;
+	color:#333;
+}
+
+
+/* transform-origin:요소변환의 기준점을 설정
+(x축-left,right,center,%,단위 / y축-top,bottom,center,%,단위) */
