@@ -1,0 +1,78 @@
+@import url(common.css);
+
+body{background:#fbf8ef;}
+
+#tabmenu{
+	width:1100px;
+	background:#fff;
+	margin:0 auto;
+}
+#tabmenu p{
+	text-align:center;
+	font-size:60px;
+	color:#7c1739;
+	padding-top:50px;
+}
+#tabmenu p img{
+	margin-top:20px;
+	padding:0 20px 0 20px;
+}
+
+#tabmenu{
+	width:1020px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.tab{
+	width:666px;
+	height:110px;
+	margin:0 auto;
+	padding-top:20px;
+}
+.tab li{
+	width:111px;
+	height:110px;
+	float:left;	
+}
+
+.active1{
+	display:block;
+	width:111px;
+	height:110px;
+	background:url(../image/tabon0.png) no-repeat;
+	text-indent:-9999px;
+}
+
+
+.panel{
+	clear:both;  /*float문제해결*/
+	margin-top:100px;
+	width:900px;
+	height:500px;
+	margin:100px auto;
+	/*background:pink;*/
+}
+.panel li ul li{float:left;} 
+.panel li ul li img{
+	width:270px;
+	height:270px;
+	border-radius:50%;
+	margin-right:30px;
+}
+/*.panel li ul>li>img:nth-of-type(2){margin:0 30px;}*/
+
+h3{
+	width:270px;
+	font-size:16px;
+	color:#b69048;
+	font-weight:bold;
+	text-align:center;
+	margin:10px 0;
+}
+h4{
+	width:200px;
+	color:#666;
+	margin:0 auto;
+}
+
+

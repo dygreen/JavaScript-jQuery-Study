@@ -1,0 +1,131 @@
+@import url(common.css);
+
+body{background:#f8f5f2;}
+
+#tabmenu h3{
+    text-align:center;
+	font-size:18px;
+	margin:0 auto;
+	padding-top:100px;
+	padding-bottom:50px;
+	color:#a57e41;
+	font-weight:400;
+}
+#tabmenu{
+	width:1000px;
+	margin:50px auto;
+    text-align:center;
+}
+
+.tab{display:inline-block;}
+.tab li{
+    float:left;
+	margin:0 50px;
+	display:block;
+	width:120px;
+	height:40px;
+    border:1px solid #d3bca1;
+	font-size:20px;
+	color:#928676;
+	font-family: 'Nanum Myeongjo', serif;
+	font-weight:400;
+    text-align:center;
+    line-height:40px	
+}
+/*.tab li a{
+	display:block;
+	width:120px;
+	height:40px;
+    border:1px solid #d3bca1;
+	font-size:20px;
+	color:#928676;
+	font-family: 'Nanum Myeongjo', serif;
+	font-weight:400;
+    text-align:center;
+    line-height:40px	
+}*/
+.tab li.selected{  /*현재 선택된 탭메뉴*/
+	background:#928676;
+	color:#fff;
+	border:1px solid #928676;
+	font-weight:700;
+}
+
+.panel{
+	clear:both;  /*float문제해결*/
+    padding:20px;
+	color:#fff;
+	font-size:14px;
+	line-height:25px;
+    padding-bottom:100px;
+}
+
+
+
+.gallery{ 
+	width:1000px;
+	height:550px;
+	margin:0 auto;
+	/* background:pink; */
+	position:relative;
+}
+.largeImg li{
+	display:none;
+	position:absolute;
+	top:50px;
+	left:100px;
+}
+.largeImg li:first-child{display:block;}
+
+.thumbs{
+	position:absolute;
+	bottom:30px;	
+	left:100px;	
+}
+.thumbs li{
+	float:left;
+	margin-right:10px;
+	opacity:0.6;
+}
+.thumbs li:first-child{opacity:1;}
+.thumbs li a img{
+	width:90px;
+	height:80px;
+}
+
+
+.panel .content{
+    text-align:left;
+    margin-top:100px;
+}
+.panel h4{
+    font-size:24px;
+	color:#826b51;
+	font-weight:400;
+    
+}
+.panel h4 span{
+    display:block;
+    font-size:36px;
+	font-weight:700;
+    margin-top:20px
+}
+.panel p{
+    font-size:18px;
+	margin-top:60px;
+    line-height:30px;
+    color:#928676
+}
+.panel .btn{
+    float:right;
+	width:150px;
+	height:50px;
+	line-height:50px;
+    text-align:center;
+	background:#9f8771;
+	color:#fff;
+    font-size:16px;
+    letter-spacing:3px;
+}
+
+
