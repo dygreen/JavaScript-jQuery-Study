@@ -1,0 +1,89 @@
+@import url(common.css);
+
+#txt1{position:fixed;top:10px;right:10px;}  /*스크롤바 위치확인*/
+
+
+/* 콘텐츠 */
+#contents{
+	margin:0 auto;
+	width:1000px;
+}
+.con1{
+	height:800px;
+	background:#e8e8e8;
+}
+.con2{
+	height:1000px;
+	background:#4a7118;
+}
+.con3{
+	height:1200px;
+	background:#2d547f;
+}
+
+
+/*///////////// TOP버튼*/
+
+.top_btn{
+	position:fixed;
+    z-index:9999;
+    bottom:20px;
+    right:10px;
+    width:35px;
+    height:35px;
+    border-radius:50%;   
+    background:#eae1ba;
+    text-align:center;
+}
+.top_btn>a>i{  /*ICON FONT 설정*/
+    line-height:35px;
+    color:#262626;
+    font-size:28px;
+}
+
+
+/*///////// 스크롤시 나오는버튼*/
+
+#scroll_btn{
+    width:110px;
+    height:auto;
+    position:fixed;
+    z-index:9999;
+    bottom:50%;
+    right:10px;
+	/*background:pink; */
+}
+#scroll_btn ul{
+    width:35px;
+    float:right;
+	/*background:yellow;*/ 
+} 
+#scroll_btn ul li{
+    width:35px;   /*jQuery에서 보여지는 가로폭 크게 변경 */
+    height:35px;
+    border-radius:50%;
+    background:#3c75d3;
+    margin-top:10px;
+    float:right;
+	overflow:hidden;
+	text-align:center;
+}
+#scroll_btn ul li a{
+	color:#fff;
+	line-height:35px;
+	font-size:12px;
+}
+
+#scroll_btn .icon{   /*ICON FONT*/
+	line-height:35px;
+    color:#fff;
+    font-size:20px;
+	text-align:right;
+}
+#scroll_btn ul li a .scroll_hover{  /*스크롤위치에 나오는 글자부분*/
+    display:none;  /*jQuery에서 보이게 변경*/
+    width:70px;
+    text-align:center;
+    font-weight:bold;
+	vertical-align:top; 
+}

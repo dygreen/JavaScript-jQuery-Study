@@ -1,0 +1,29 @@
+@import url(common.css);
+
+#contain{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+.left{
+	width:220px;
+	height:500px;
+	float:left;
+	background:pink;
+}
+.right{
+	width:780px;
+	float:left;
+}
+
+
+/* QUICK MENU */
+
+.quick_in{
+    position:absolute;
+    width:87px;
+    left:100%; /*contents가 끝나는 바로 다음에 위치*/
+    top:20px; /*제이쿼리를 적용하면 의미가 없음->제이쿼리에서 조정함.*/ 
+}
+
+.topmove{cursor:pointer;}

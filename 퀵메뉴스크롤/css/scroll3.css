@@ -1,0 +1,43 @@
+@import url(common.css);
+
+#contain{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+.left{
+	width:220px;
+	height:500px;
+	float:left;
+	background:pink;
+}
+.right{
+	width:780px;
+	float:left;
+}
+
+
+/* Quick Banner */
+
+#QuickBanner {
+    position:absolute;
+    top:20px;
+    left:100%; /*contents가 끝나는 바로 다음에 위치*/
+}
+
+.banner{
+	width: 193px;
+	height: 178px;  
+	cursor:pointer;
+	animation:updown 3s infinite;
+}
+
+@keyframes updown{
+	0%{
+        transform:translate(0px,0px );
+    }50%{
+        transform:translate(0px,30px );
+    }100%{
+        transform:translate(0px,0px );
+    }	
+}

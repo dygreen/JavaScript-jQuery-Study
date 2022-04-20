@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>스크롤에 따라 보였다 숨겼다 하는 TOP버튼과 아이콘버튼</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/scroll2.css">
+</head>
+<body>
+<p id="txt1">0</p> <!--스크롤위치파악하기-->
+
+<!--TOP버튼-->
+<div class="top_btn">
+   <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+</div>
+
+<!--스크롤시 나오는 버튼-->
+<div id="scroll_btn">
+    <ul>
+        <li class="scb1"><a href="#"><span class="scroll_hover">CONTENT1</span><i class="material-icons icon">question_answer</i></a></li>
+        <li class="scb2"><a href="#"><span class="scroll_hover">CONTENT2</span><i class="material-icons icon">library_books</i></a></li>
+        <li class="scb3"><a href="#"><span class="scroll_hover">CONTENT3</span><i class="material-icons icon">import_contacts</i></a></li>
+    </ul>
+</div>
+
+
+<!--콘텐츠 영역-->
+<div id="contents">
+	<div class="con1"><h1>CONTENTS-1</h1></div>
+	<div class="con2"><h1>CONTENTS-2</h1></div>
+	<div class="con3"><h1>CONTENTS-3</h1></div>
+</div>
+		
+<!-- Script Source -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/scroll2.js"></script>
+</body>
+</html>

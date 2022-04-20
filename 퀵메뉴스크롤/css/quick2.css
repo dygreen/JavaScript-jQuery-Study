@@ -1,0 +1,33 @@
+@import url(common.css);
+
+.quick_toggle{  /*open->처음에 표시되는 open버튼*/
+	position:fixed;
+	bottom:0; 
+	right:0; 
+	width:70px;
+	height:70px;
+	background:url(../image/quick_open1.png) no-repeat;
+	display:block;
+	cursor:pointer;
+}
+.quick_open{   /*close->jquery에서 불러옴*/
+	position:fixed; 
+	bottom:0; 
+	right:0; 
+	width:70px;
+	height:70px;
+	background:url(../image/quick_close1.png) no-repeat;
+	display:block;
+	cursor:pointer;
+}
+
+.quickmenu{
+	position:fixed; 
+	bottom:-370px; /*높이만큼 모니터 아래쪽 밖으로 내림->jQuery에서 올림*/
+	right:0; 
+	width:70px;
+	height:370px;
+	background:#585858;
+}
+.quickmenu .quick_icon{padding-top:10px;}
+.quickmenu .quick_icon li{text-align:center;}
