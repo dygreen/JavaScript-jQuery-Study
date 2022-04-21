@@ -1,0 +1,101 @@
+@import url(common.css);
+
+body{background:#ccc}
+
+#header{
+	width:100%;
+	height:70px;
+	background:#fff;
+}
+.header_in{
+	width:1000px;
+	height:70px;
+	margin:0 auto;
+	position:relative;
+}
+
+/* 로고 */
+.logo{
+	width:80px;
+	height:50px;
+	float:left;
+	padding:20px 30px 0 40px;
+}
+
+/* 주메뉴 */
+.top_nav{
+	width:800px;
+	height:42px;
+	float:left;
+	position:relative; 
+	z-index:100;
+	margin-top:25px;
+}
+.top_nav .topmenu>li{
+	float:left;
+	padding:10px 30px;
+}
+
+
+/*=== sitemap ===*/
+
+.menu_toggle_btn{  /*전체메뉴버튼*/  
+	position:absolute;
+	top:20px;
+	right:10px;	
+	display:block;
+	width:40px;
+    height:40px;
+	background:none;
+	outline:none;
+    border:none;
+    margin:0;
+    cursor:pointer;
+}
+
+.menu_toggle_btn span{  /*전체메뉴가로선이 3개일때*/ 
+	position:absolute;
+    left:0;
+    top:-2px;
+    width:70%;
+    height:4px;
+    background:#00548b;
+	content:'';
+    transition:all 0.3s;
+    margin-left:15%;
+}
+
+.menu_toggle_btn:before,.menu_toggle_btn:after{  /*전체메뉴 가로선막대2개 생성*/
+	position:absolute;
+    left:0;
+    width:70%;
+    height:4px;
+    background:#00548b;
+	content:'';
+    transition:all 0.3s;
+    margin-left:15%;
+}
+.menu_toggle_btn:before{transform:translateY(-12px);}
+.menu_toggle_btn:after{transform:translateY(8px);}
+
+/*jquery에서 불러낼 클래스 "menu-open" */
+.menu_toggle_btn.menu-open:before{transform:translateY(0px) rotate(135deg);}
+.menu_toggle_btn.menu-open:after{transform:translateY(0px) rotate(-135deg);}
+.menu_toggle_btn.menu-open span{opacity:0;}  /*가로선3개중 가운데선*/
+
+
+.top_nav .allmenu{   /*sitemap 내용부분*/
+	display:none;
+	width:800px;
+	height:400px;
+	background:#333;
+	position:absolute;
+	top:107%;
+	left:5px;	
+}
+
+.top_nav .allmenu h3{
+	text-align:center;
+	color:#fff;
+	padding-top:200px;
+}

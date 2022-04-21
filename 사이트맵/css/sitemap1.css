@@ -1,0 +1,126 @@
+@import url(common.css);
+
+#wrap{width:100%;}
+
+#header{
+	width:1040px;
+	height:500px;
+	margin:0 auto;
+	background:#ccc;
+}
+h1{
+	text-align:center;
+	padding-top:200px;
+}
+
+
+/* ==== sitemap ==== */
+
+.sitemap{
+	height:0;  /*jquery에서 height 늘림*/
+	margin-top:60px;
+	border-top:1px solid #e5e5e5;
+}
+
+.sitemap_in{
+	position:relative;
+	width:1040px;
+	margin:0 auto;
+}
+
+.sitemap_list{display:none;} /*jquery에서 show()*/
+
+.sitemap_list>li{
+	float:left;
+	width:152px;
+	height:180px;
+	padding:20px 0 0 20px;
+	border-right:1px solid #e5e5e5;
+	line-height:20px;
+}
+
+.sitemap_list>li:first-child{
+	width:153px;
+	border-left:1px solid #e5e5e5;
+}
+
+.sitemap_list>li>a{  /*주메뉴*/
+	display:block;
+	margin-bottom:10px;
+	font-size:14px;
+	font-weight:bold;
+	color:#61bc47;
+}
+
+.site_sub>li{line-height:20px;}
+.site_sub>li>a{color:#5e5e5e;}
+.site_sub2>li{line-height:16px;}
+.site_sub2>li>a{
+	font-size:11px;
+	font-weight:normal;
+	color:#b1b1b1;
+}
+
+ 
+/* sitemap버튼 */
+
+.sitemap_btn{
+	position:absolute;
+	top:-25px;
+	right:500px;
+}
+
+.sitemap_btn span{ /*jquery에서 close버튼으로 이미지변경*/
+	display:block;
+	width:80px;
+	height:25px;
+	background:url(../image/sitemap_open.png) no-repeat;
+	cursor:pointer;
+}
+
+ 
+/* ============ footer ============ */
+
+#footer{
+	width:1040px;
+	height:120px;
+	margin:0 auto;
+	padding-top:20px;
+}
+.foot_left{float:left;}
+.foot_logo{float:left;}
+.foot_util ul{
+	float:left;
+	margin-left:50px;
+}
+.foot_util ul li{
+	float:left;
+	padding:8px 5px;
+}
+.foot_util ul li a{
+	font-weight:bold;
+	color:#666;
+}
+
+.foot_util .ff1{color:#61bc47;} /*뉴스레터 신청*/
+
+address{
+	clear:both;
+	font-style:normal;
+	color:#9b9b9b;
+}
+.copy{color:#9b9b9b;}
+.foot_tell{   /*문의1577-1333*/
+	float:right;
+	padding:8px 10px 10px 10px;
+	margin:20px 50px;
+	border-top:1px solid #c3c3c3;
+	border-bottom:1px solid #c3c3c3;
+}
+.foot_tell p{color:#9b9b9b;}
+.foot_tell span{
+	padding-left:10px;
+	font-size:22px;
+	font-weight:bold;
+	color:#333;
+}

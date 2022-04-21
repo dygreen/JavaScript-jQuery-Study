@@ -1,0 +1,116 @@
+@import url(common.css);
+
+body{background:#efefef;}
+
+#wrap{width:100%}
+
+#contents{
+	width:1000px;
+	height:500px;
+	background:skyblue;
+	margin:0 auto;
+}
+
+
+/*Footer----------------------------------*/
+
+#footer{
+	width:100%;
+	border-top:solid 2px #334555;
+	background-color:#fff;
+	margin-top:50px;
+	padding-bottom:10px;
+}
+#footer .footer1{
+	width:100%;
+	height:50px;
+	border-bottom:solid 1px #e9e9e9;
+}
+.footer1_in{
+	width:1000px;
+	margin:0 auto;
+}
+
+.footmenu1, .footmenu2{width:500px;float:left;}
+
+.footmenu1 h4{ /*footmenu1 line*/
+	font-size:13px;
+	font-weight:400;
+	line-height:50px;
+	padding-left:20px;
+	border-left:solid 1px #e9e9e9;
+}
+
+.footmenu2 h4{ /*footmenu2 line*/
+	font-size:13px;
+	font-weight:400;
+	line-height:50px;
+	padding-left:20px;
+	border-left:solid 1px #e9e9e9;
+	border-right:solid 1px #e9e9e9;
+}
+
+.footer1_in h4 span{  /*footmenu1,footmenu12공통(화살표삽입)*/
+	display:block;
+	width:50px;
+	height:50px;
+	float:right;
+	border-left:solid 1px #e9e9e9;
+	background:url(../image/up_arrow.png) no-repeat 0 0;
+	cursor:pointer;
+}
+.footer1_in h4 span.arrow{ /*jquery에서 불러냄*/
+	display:block;
+	width:50px;
+	height:50px;
+	float:right;
+	background:url(../image/down_arrow.png) no-repeat 0 0;
+}
+
+
+.footmenu1{position:relative;}
+.footmenu1 .fbox1{   /* footmenu1의 Select박스*/
+	display:none;
+	position:absolute;
+	bottom:103%;  /*보통 100%를 사용해서 끝나는 지점에 맞추지만 가로라인이 겹쳐서 깔끔하게 하기 위해 조정함.*/
+	left:0;
+	width:600px;
+	border:1px solid #334555;
+	padding:30px;
+	padding-left:20px;
+	padding-right:10px;
+	background:#fff;
+}
+.footmenu1 .fbox1>ul>li{
+	width:120px;
+	float:left;
+	margin-left:15px;
+	padding-right:20px;
+	border-right:solid 1px #e9e9e9;
+	font-size:14px;
+	font-weight:600;
+}
+.footmenu1 .fbox1 .fb1{margin-left:0;}
+.footmenu1 .fbox1 .last{
+	padding-right:0;
+	border-right:0;
+}
+
+.footmenu1 .fbox1>ul>li>ul{
+	margin-top:10px;
+}
+.footmenu1 .fbox1>ul>li>ul>li{
+	margin-bottom:5px;
+}
+
+.footmenu1 .fbox1>ul>li>ul>li>a{
+	color:#666;
+	font-size:13px;
+	font-weight:normal;
+}
+
+#footer .footer2{
+	width:1000px;
+	margin:25px auto;
+	background : #fff;
+}

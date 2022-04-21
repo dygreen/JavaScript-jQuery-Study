@@ -1,0 +1,30 @@
+@import url(common.css);
+
+.mycard{
+	display:inline-block;
+	margin-top:50px;
+	margin-left:50px;
+	position:relative;
+}
+.mycard a{
+	position:relative;
+	z-index:20;
+}
+
+.mycard ul{
+	display:none;
+	position:absolute;
+	top:26px; /*나의메뉴 버튼 오버시 나오는 이미지 부분을 맞춰서 설정함*/  
+	left:0px;
+	padding:5px 0;
+	width:133px;
+	line-height:24px;
+	background:#f9f9f9;
+	border:1px solid #cecece;
+	z-index:10;
+}
+.mycard ul li a{
+	color:#6b6b6b;
+	margin-left:5px;
+}
+.mycard ul li a:hover{color:#000;}

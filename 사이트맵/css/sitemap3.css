@@ -1,0 +1,77 @@
+@import url(common.css);
+
+body{background:#ccc}
+
+#header{
+	width:100%;
+	height:70px;
+	background:#fff;
+}
+.header_in{
+	width:1000px;
+	height:70px;
+	margin:0 auto;
+	position:relative;
+}
+
+/* 로고 */
+.logo{
+	width:80px;
+	height:50px;
+	float:left;
+	padding:20px 30px 0 40px;
+}
+
+/* 주메뉴 */
+.top_nav{
+	width:800px;
+	height:42px;
+	float:left;
+	position:relative; 
+	z-index:100;
+	margin-top:25px;
+}
+.top_nav .topmenu>li{
+	float:left;
+	padding:10px 30px;
+}
+
+
+/*=== sitemap ===*/
+
+.menu_toggle_btn{  /*전체메뉴버튼*/  
+	position:absolute;
+	top:5px;
+	right:10px;
+	width:28px;
+	height:30px;
+	background:url(../image/btnall_open.png) no-repeat;
+	cursor:pointer;
+}
+.mclose{  /*닫기버튼->jquery 에서 불러냄*/
+	position:absolute;
+	width:28px;
+	height:30px;
+    top:5px;
+	right:10px;
+	background:url(../image/btnall_close.png) no-repeat;
+	cursor:pointer;
+}
+
+
+.top_nav .allmenu{   /*sitemap 내용부분*/
+	display:none;
+	width:800px;
+	height:400px;
+	background:#333;
+	position:absolute;
+	top:107%;
+	left:5px;	
+}
+
+.top_nav .allmenu h3{
+	text-align:center;
+	color:#fff;
+	padding-top:200px;
+}
+

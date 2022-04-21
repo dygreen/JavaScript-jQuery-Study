@@ -1,0 +1,124 @@
+@import url(common.css);
+
+body{background:#dddcdb}
+
+#contents{
+	width:1000px;
+	height:500px;
+	background:skyblue;
+	margin:0 auto;
+}
+
+#footer{
+	width:1000px;
+	height:60px;
+	margin:0 auto;
+	position:relative;
+	background:url(../image/icoFootLogo.gif) no-repeat center center #fff;
+}
+
+.fmbox1{
+	position:absolute;
+	left:0px;
+}
+.fmbox2{
+	position:absolute;
+	right:0px;
+}
+
+
+/* fmbox1----------------- */
+
+.fmbox1 h3{  /*브랜드사이트*/
+	width:150px;
+	height:60px;
+	background:url(../image/btnBrandSite.gif) no-repeat;
+	cursor:pointer;
+	border-right:2px solid #dddcdb;
+}
+
+.fmbox1 .mclose1{ /*close버튼->query에서 불러냄*/
+	position:absolute;
+	top:100%;
+	width:150px;
+	height:60px;
+	background:url(../image/btnSiteLinkClose.gif) no-repeat 50% 50% #2a2a2a;
+	cursor:pointer;
+}
+
+.fmbox1 div{   /*셀렉트 박스*/
+	display:none;
+	background:#2a2a2a;
+	width:150px;
+	position:absolute;
+	bottom:100%;
+}
+.fmbox1>div>ul>li>span{   /*메뉴의 소제목*/
+	display:block;
+	margin:10px 0;
+	color:#fff;
+	font-size:13px;
+	font-weight:600;
+	text-indent:10px;	
+}
+
+.fmbox1 div ul li ul{
+	padding-bottom:8px;
+	border-bottom:solid 1px #535252;
+	text-indent:10px;
+}
+.fmbox1 div ul li ul li{margin-bottom:3px;}
+.fmbox1 div ul li ul li a{
+	display:block;
+	width:150px;
+	color:#969696;
+	padding:3px 0;
+}
+.fmbox1 div ul li ul li a:hover{  /*서브메뉴의 화살표*/
+	color:#fda601;
+	background:url(../image/fmarrow.gif) no-repeat 130px 50% #000;
+}
+
+
+/* fmbox2----------------- */
+
+.fmbox2 h3{  /*브랜드사이트*/
+	width:150px;
+	height:60px;
+	background:url(../image/btnRecruitInfo.gif) no-repeat;
+	cursor:pointer;
+	border-left:2px solid #dddcdb;
+}
+
+.fmbox2 .mclose2{ /*close버튼->query에서 불러냄*/
+	position:absolute;
+	top:100%;
+	right:0;
+	width:150px;
+	height:60px;
+	background:url(../image/btnSiteLinkClose.gif) no-repeat 50% 50% #2a2a2a;
+	cursor:pointer;
+}
+
+.fmbox2 div{   /*셀렉트 박스*/
+	display:none;
+	position:absolute;
+	right:0;
+	bottom:100%;
+	width:150px;
+	background:#2a2a2a;
+}
+
+
+.fmbox2 div ul{border-bottom:solid 1px #535252;}
+.fmbox2 div ul li{margin-bottom:3px;text-indent:10px;}
+.fmbox2 div ul li a{
+	display:block;
+	width:150px;
+	color:#969696;
+	padding:3px 0;
+}
+.fmbox2 div ul li a:hover{
+	color:#fda601;
+	background:url(../image/fmarrow.gif) no-repeat 130px 50% #000;
+}
