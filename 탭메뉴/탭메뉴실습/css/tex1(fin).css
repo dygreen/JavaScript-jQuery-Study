@@ -1,0 +1,78 @@
+@import url(common.css);
+
+body {background-image: url("../image/tbg.jpg");}
+
+#tabmenu {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.tab li {
+  float: left;
+  width: 110px;
+  margin-right: 40px;
+  position: relative;
+  display: block;
+  background: #a4dc6c;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 5px 5px 0 0px;
+}
+
+.tab li.selected { /*현재 선택된 탭메뉴*/
+  background: #7adcb8;
+  color: #3ca58a;
+  font-weight: bold;
+  font-size: 17px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.tab li span { /*삼각형도형*/
+  position: absolute;
+  top: 0;
+  right: -39px;
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid #a4dc6c;
+  border-right: 40px solid transparent;
+
+}
+
+.tab li.selected span { /*현재 선택된 삼각형도형*/
+  position: absolute;
+  top: 0;
+  right: -39px;
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid #7adcb8;
+  border-right: 40px solid transparent;
+}
+.panel {
+  clear: both;
+  background: #fff;
+  padding: 20px;
+  height: 300px;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 0px 0px 50px #ccc inset;
+}
+p .title {
+  display: block;
+  font-size: 22px;
+  height: 30px;
+  font-weight: bold;
+  color: #7adcb8;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 1px;
+  border-bottom: 1px dashed #7adcb8;
+}
+p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  padding: 20px;
+}
