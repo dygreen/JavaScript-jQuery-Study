@@ -1,0 +1,191 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} /*위 부모요소의 값을 상속*/
+
+/*---------- section style ----------*/
+
+section{background:#eaeaea;}
+
+.section_in{
+  width: 1020px;
+  background: #fff;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.section_in h3{ /* 서브페이지 제목 공통 */
+  color: #666;
+  font-size: 36px;
+  padding: 5px;
+  text-align: center;
+  padding-top: 30px;
+  border-bottom: 1px solid #ccc;
+  width: 200px;
+  margin: 0 auto 20px;
+}
+
+.section_in p{text-align: center;}
+
+/* ======= about SubPage =======*/
+.about_top{
+  position: relative;
+  width: 900px;
+  height: 300px;
+  margin: 50px auto;
+  background: url(../image/about_top.png) no-repeat left top;
+}
+
+.about_top h2{
+  position: absolute;
+  top: 80px;
+  right: 200px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #333;
+}
+
+.about_top h4{
+  position: absolute;
+  top: 110px;
+  right: 130px;
+  text-align: right;
+  font-size: 32px;
+  color: #2a5c9a;
+  text-shadow: 2px 2px 2px #666;
+}
+
+.about_bottom{
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  background: url(../image/about_bottom.png) no-repeat right bottom;
+}
+
+.a_left{
+  width: 350px;
+  float: left;
+}
+
+.a_right{
+  width: 350px;
+  float: right;
+}
+
+.about_bottom h5{
+  width: 150px;
+  height: 30px;
+  border-radius: 20px;
+  background: #56a925;
+  margin: 0 0 40px 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px #fff inset; /* inset-안쪽그림자 */
+}
+
+.about_bottom ul li{
+  list-style-image: url(../image/dot.png);
+  list-style-position: inside;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #666;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  text-indent: 20px; /* 아래 점선길이 안쪽으로 글자 들여쓰기 */
+}
+
+
+/* ======= business SubPage =======*/
+.img-txt{
+  overflow: hidden;
+  padding: 30px 20px;
+}
+
+.img-txt:last-child{padding-bottom: 100px;}
+.img-txt>img{float: left;}
+
+.img-txt .part-txt1{
+  float: right;
+  width: 592px;
+}
+
+.part-txt1 h4{
+  font-size: 20px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.part-txt1 p{
+  color: #333;
+  line-height: 24px;
+  text-align: left;
+}
+
+/* ======= contact SubPage =======*/
+
+/* 왼쪽 폼부분 */
+.online{
+  float: left;
+  width: 600px;
+  padding-top: 30px;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+
+.mail p{margin-bottom: 15px;}
+.mail input{
+  width: 80%;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.mail textarea{
+  width: 80%;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.mail .btn{
+  width: 85px;
+  height: 40px;
+  line-height: 40px;
+  background: #3157ad;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.mail .btn:hover{background: #163780;}
+
+/* 오른쪽 주소부분 */
+.contact{
+  float: left;
+  width: 350px;
+  margin-top: 30px;
+  /* background: yellow; */
+}
+
+.contact p{
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.material-icons{
+  font-size: 20px;
+  color: #666;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.map{text-align: center;} /* 지도 가운데 정렬 */

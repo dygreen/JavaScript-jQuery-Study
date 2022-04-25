@@ -1,0 +1,125 @@
+/*---------- header style ----------*/
+
+/*메인페이지 배경 */
+.mheader{  
+	background:url(../image/first-bg.jpg) no-repeat center bottom fixed;
+	height:900px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-ms-background-size:cover;
+	-o-background-size:cover;
+}
+
+
+/*주메뉴별 바뀌는 서브페이지의 탑배경이미지*/
+.subtop1{
+	background:url(../image/topsub_1.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:400px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+.subtop2{
+	background:url(../image/topsub_2.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:400px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+.subtop3{
+	background:url(../image/topsub_3.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:400px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+.subtop4{
+	background:url(../image/topsub_4.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:400px;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+
+
+.header-content-fixed{
+	width:inherit;  /* width:100% 상속*/
+	height:60px;
+	background:#fff;
+	position:fixed;   /*상단메뉴고정*/
+}
+.header-content{
+	width:1200px;
+	margin:0 auto;	
+}
+
+.logo{
+	float:left;
+	padding-top:15px;
+}
+
+
+/*탑메뉴*/
+
+.header-navi{text-align:right;}
+.navi{display:inline-block;}
+.navi li{float:left;}
+.navi li a{
+	display:block;
+	font-size:15px;
+	letter-spacing:1px;
+	color:#666;	
+	line-height:60px;
+	padding:0 30px;
+	transition:all 0.5s ease-in;
+}
+.navi li a:hover{
+	background:#030;
+	color:#fff;
+}
+
+
+/* 메인,서브타이틀 */
+
+.header-caption{  /*메인타이틀*/
+	text-align:center;
+	padding-top:300px;
+}
+.sheader-caption{  /*서브타이틀*/
+	text-align:center;
+	padding-top:170px;
+}
+
+.header-caption h2{
+	color:#fff; 
+	padding-bottom:20px;
+}
+.header-caption h1,.sheader-caption h1{
+	color:#fff;
+	font-size:40px;
+	padding-bottom:10px;
+}
+.header-caption p,.sheader-caption p{
+	color:#fff;
+	padding-bottom:40px;
+}
+
+/*메인비주얼 버튼*/
+.down-btn{
+	background:#000;
+	width:200px;
+	height:50px;
+	margin:0 auto;
+	line-height:50px;
+}
+.down-btn>a{
+	padding:10px 0;
+	color:#ccc;
+	font-size:16px;
+}
+.down-btn>a:hover{color:#fff;}

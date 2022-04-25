@@ -1,0 +1,25 @@
+/*---------- footer style ----------*/
+
+footer{background:#ff4d51;}
+.footer-content{
+	text-align:center;
+	padding:80px 0 50px;
+}
+.footer-content>address{
+	color:#fff;
+	padding-bottom:30px;
+	font-size:14px;
+	/*font-style:normal;  address의 이탤릭기능해제*/
+}
+
+.top-btn{
+	width:40px;
+	height:40px;
+	background:#fff;
+	margin:0 auto;
+	line-height:40px;
+}
+.top-btn a{
+	color:#ff4d51;
+	font-size:20px;
+}

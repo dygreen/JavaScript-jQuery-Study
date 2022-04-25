@@ -1,0 +1,169 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} /*위 부모요소의 값을 상속*/
+
+/*---------- section style ----------*/
+
+section{background:#eaeaea;}
+.green-list, .green-content, .green-company{width:inherit;}
+.green-list-content, .green-txt-content, .company{
+	width:1020px;
+	margin:0 auto;
+}
+
+
+/*첫번째 구조 레이아웃*/
+
+.green-list{padding:80px 0;}
+.content-list{
+	overflow:hidden; /*자식float로 부모가 높이인식하지못하는 문제 해결*/
+	width:inherit; /* width:1020px; 상속*/
+}
+.content-list>li{
+	float:left;
+	width:240px;
+	background:#fff;
+	margin-right:20px;
+	padding:20px 0;
+	box-sizing:border-box;  /*margin속성만 포함*/
+}
+.content-list>li:last-child{margin-right:0;}
+
+/* /// 아이콘이미지 bg로 위치제어 ///*/
+.icon-block1{
+	margin:0 auto;
+	background:url(../image/icon1.jpg) no-repeat center center;
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+	border-radius:50%;
+}
+.icon-block2{
+	margin:0 auto;
+	background:url(../image/icon2.jpg) no-repeat center center;
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+	border-radius:50%;
+}
+.icon-block3{
+	margin:0 auto;
+	background:url(../image/icon3.jpg) no-repeat center center;
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+	border-radius:50%;
+}
+.icon-block4{
+	margin:0 auto;
+	background:url(../image/icon4.jpg) no-repeat center center;
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+	border-radius:50%;
+}
+
+.list-txt{
+	width:200px;
+	height:150px;
+	margin:0 auto;
+	/*background:yellow; */
+}
+.list-txt>h4{
+	text-align:center;
+	color:#333;
+	padding:20px 0;
+}
+p{
+	font-size:15px;
+	color:#666;
+	line-height:22px;
+}
+
+
+/*두번째 구조 레이아웃*/
+
+.green-content{
+	background:url(../image/topsub_2.jpg) no-repeat bottom center fixed;
+	background-size:cover;	
+}
+
+.green-txt-content>ul{
+	overflow:hidden;
+	padding:120px 0;
+}
+.green-txt-content>ul li{
+	float:left;
+	width:495px;
+	background:#fff;
+	padding:0 0 50px;
+}
+.green-txt-content>ul li:last-child{float:right;}
+
+.txt-block{
+	width:400px;
+	margin:0 auto;
+	/*background:pink; */
+}
+.txt-block .title{
+	font-size:18px;
+	color:#666;
+	font-weight:bold;
+	text-align:center;
+	padding:20px 0 10px 0;	/*상우하좌*/
+}
+.txt-block .line1{
+	width:60%;
+	border:1px solid #999;
+	border-bottom:0px; 
+	margin:0 auto;
+	margin-bottom:20px;	
+}
+.txt-block .txt1{
+	padding-top:20px; 
+	color:#ff3300;
+	font-weight:bold;
+	padding-bottom:66px;
+}
+.txt-block .txt2{
+	padding-bottom:40px; 
+	color:#ff3300;
+	font-weight:bold;
+}
+
+.read-btn{
+	width:180px;
+	margin:20px auto;
+}
+.read-btn>a{
+	display:block;
+	padding:10px 0;
+	color:#fff;
+	font-size:14px;
+	background:#ff4d51;
+	text-align:center;
+	box-sizing:border-box;
+}
+.read-btn>a:hover{
+	color:#ff4d51;
+	background:#fff;
+	border:1px solid #ff4d51;
+	padding:9px 0;  /*버튼 오버시 1px의 세로크기 차이로 밑으로 밀리는것을 해결*/
+}
+
+
+/*세번째 구조 레이아웃*/
+
+.company{
+	text-align:center;
+	padding:80px 0;
+}
+.company .line2{
+	width:60%;
+	border:1px solid #ff4d51;
+	border-bottom:0px;
+	margin:20px auto;
+}
