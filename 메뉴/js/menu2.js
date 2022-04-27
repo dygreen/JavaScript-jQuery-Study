@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
-  $(".gnbMenu>li").hover(function(){
-    $(this).find(">ul").stop().slideDown();
-  }, function(){
-    $(this).find(">ul").stop().slideUp();
-  });
-
-
+  // $(".gnbMenu>li").hover(function(){
+  //   $(this).find(">ul").stop().slideDown();
+  // }, function(){
+  //   $(this).find(">ul").stop().slideUp();
+  // });
+  
 });
 
 /* stop(): 사용자의 중복 반응 제거
