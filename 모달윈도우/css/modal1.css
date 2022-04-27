@@ -1,0 +1,64 @@
+@import url(common.css);
+
+#popup{ 
+	margin:0 auto; 
+	width:1000px;  
+}
+
+#popup ul li{
+	float:left; 
+	width:150px; 
+	height:150px; 
+	margin-left:20px; 
+	background:orange;
+}
+#popup ul li a{
+	font-size:30px;
+	font-weight:bold;
+	color:#fff;
+}
+
+
+/* POPUP BOX */
+
+.pop{ /*검정배경*/
+	display:none; 
+	position:fixed; 
+	left:0; 
+	top:0;
+	width:100%; 
+	height:100%; 
+	background:rgba(0,0,0,0.7); 
+	z-index:1000;  /*모든 콘텐츠보다 가장 위에 올라와야 함*/
+	overflow:auto;  /*모달창의 스크롤바를 콘텐츠의 내용길이에 따라 자동으로 나오게 함*/
+}
+
+/*각 목록별 나오는 모달팝업 내용 나오는 부분*/
+.c1{ 
+	margin:0 auto; 
+	width:1007px; 
+	height:100%; 
+	color:#767676; 
+	background:yellow; 
+}
+.c2{ 
+	margin:0 auto; 
+	width:900px; 
+	height:100%; 
+	color:#767676; 
+	background:pink;  
+}
+.c3{ 
+	margin:0 auto; 
+	width:900px; 
+	height:100%; 
+	color:#767676; 
+	background:skyblue;
+}
+
+.close{ /*닫기*/
+	position:fixed; 
+	right:30px; 
+	top:30px; 
+	color:#fff; 
+}
