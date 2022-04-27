@@ -1,0 +1,209 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+/*사용한 웹폰트
+font-family: 'Exo', sans-serif;
+font-family: 'Staatliches', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Bellota', cursive;
+font-family: 'Bebas Neue', cursive;
+*/
+
+/* 전체메뉴 */
+.menu_toggle_btn {
+  /*전체메뉴버튼*/
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 99999; /* 닫을 수 있는 버튼(close) 맨위로 */
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.menu_toggle_btn span {
+  /*전체메뉴가로선이 3개일때*/
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background: #00548b;
+  content: '';
+  transition: all 0.3s;
+  margin-left: 15%;
+}
+
+.menu_toggle_btn:before,
+.menu_toggle_btn:after {
+  /*전체메뉴 가로선막대2개 생성*/
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background: #00548b;
+  content: '';
+  transition: all 0.3s;
+  margin-left: 15%;
+}
+
+.menu_toggle_btn:before {
+  transform: translateY(-12px);
+}
+
+.menu_toggle_btn:after {
+  transform: translateY(8px);
+}
+
+/*jquery에서 불러낼 클래스 "menu-open" */
+.menu_toggle_btn.menu-open:before {
+  transform: translateY(0px) rotate(135deg);
+}
+
+.menu_toggle_btn.menu-open:after {
+  transform: translateY(0px) rotate(-135deg);
+}
+
+.menu_toggle_btn.menu-open span {
+  opacity: 0;
+}/*가로선3개중 가운데선*/
+
+.logo, .menu{display: none;} /* 왼쪽과 오른쪽 내용 안보이게 함 */
+
+
+/* 왼쪽 영역_____________ */
+.menu_left{
+  width: 50%;
+  height: 0%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #8372a6;
+  display: flex; /* flex는 바로 아래 단계만 적용됨 - 아래단계가 움직임 */
+  justify-content: center;
+  align-items: center;
+}
+
+h1{text-align: center;}
+
+.logo h2{
+  font-size: 80px;
+  font-family: 'Bellota', cursive;
+  color: #e8e8e8;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* 오른쪽 영역_____________ */
+.menu_right{
+  width: 50%;
+  height: 0%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  background: #422d72;
+}
+
+.menu_right_in{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  /* background: pink; */
+}
+
+/* 오른쪽 모니터 바깥쪽으로 내보내기 -> jQuery에서 나오게 함*/
+.menu .menu_list:nth-child(1){position:absolute; top:25%; right:-100%;}
+.menu .menu_list:nth-child(2){position:absolute; top:32%; right:-100%;}
+.menu .menu_list:nth-child(3){position:absolute; top:40%; right:-100%;}
+.menu .menu_list:nth-child(4){position:absolute; top:48%; right:-100%;}
+.menu .menu_list:nth-child(5){position:absolute; top:56%; right:-100%;}
+.menu .menu_list:nth-child(6){position:absolute; top:64%; right:-100%;}
+
+
+.menu_right_in .menu li{
+  position: relative;
+  width: 300px;
+  height: 70px;
+}
+
+.menu_right_in .menu li a{
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  font-family: 'Exo', sans-serif;
+  transition: all 0.4s;
+}
+
+.menu_right_in .menu li span{
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-image:linear-gradient(to right,transparent 0%,rgba(255,255,255,0.5) 50%,transparent 100%); /* 끝이 흐려지는 선 ✔ */
+  /* border-bottom: 2px solid #fff; */
+  position: absolute;
+  top: 47px;
+  left: 50%;
+  transform:  translateX(-50%);
+  transition: all 0.4s;
+}
+
+.menu_right_in .menu li a:hover span{
+  width: 220px;
+  /* border-bottom: 2px solid #fff; */
+}
+
+.menu_right_in .menu li:hover a{color: #666;}
+
+/* 배경이 열린 후에 보여지는 콘텐츠 영역____________ */
+#wrap{ /* 모든 모니터 해상도에 상관없이 (full-screen)텍스트 수평수직 정가운데정렬 ✔ */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex; 
+  flex-direction: column;
+  align-items: center; /* 주축이 바뀌었음 */
+}
+
+#wrap h3{
+  font-size: 80px;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 3px;
+  color: #422d72;
+}
+
+#wrap h4{
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  font-weight: 100;
+}
+
+#wrap h5{
+  color: #666;
+  font-size: 16px;
+  margin-top: 20px;
+}
