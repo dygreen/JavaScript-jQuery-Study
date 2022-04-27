@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>TOP에 띄우는 팝업창</title>
+<link rel="stylesheet" href="css/pop4.css">
+
+<!-- 팝업창 스크립트 start-->
+<script>
+function getCookie( name ){
+     var nameOfCookie = name + "=";
+     var x = 0;
+     while ( x <= document.cookie.length )
+     {
+      var y = (x+nameOfCookie.length);
+      if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+       if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+       endOfCookie = document.cookie.length;
+       return unescape( document.cookie.substring( y, endOfCookie ) );
+      }
+
+      x = document.cookie.indexOf( " ", x ) + 1;
+
+      if ( x == 0 ) break;
+     }
+     return "";
+    }
+
+function setCookie( name, value, expiredays )
+{
+ var todayDate = new Date();
+ todayDate.setDate( todayDate.getDate() + expiredays );
+ document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+</script> 
+<!-- 팝업창 스크립트 end -->
+
+</head>
+<body>
+
+<!--Top Popup Start-->	
+<div id="topbanner">	
+	<div class="pop_box">
+		<div class="pop_img">
+			<img src="image/top_pop2.jpg" alt="메인탑팝업">
+		</div>
+	</div>
+	<div class="btn_close">
+		<a href="#"><span class="indent">팝업창닫기</span></a>
+	</div>
+	
+	<!-- 오늘하루 열지않기 start -->        
+	<div class="btn_dayclose" id="btn_dayclose"> 
+		<input name="checkbox" type="checkbox" onclick="
+		if (this.checked === true)
+		{
+		setCookie('aa6', 'done', 1);
+		$('.pop_box').stop(true,true).animate({'margin-top':'-132px'},500);
+		$('.btn_dayclose').stop(true,true).animate({'margin-top':'-132px'},500);
+		$('.btn_close').stop(true,true).animate({'margin-top':'-132px'},500);
+		}
+		" ><span >&nbsp;오늘하루 열지않기</span>  
+	</div>
+	<!-- 오늘하루 열지않기 end -->
+	
+</div>
+<!--Top Popup End-->
+
+<div id="wrap">
+	<div id="header">
+		<h2>헤더영역</h2>
+	</div>
+	
+	<div id="contents">
+		<h2>컨텐츠영역</h2>
+	</div>
+</div>
+
+<!-- Script Source -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/pop4.js"></script>
+</body>
+</html>
+
+
+

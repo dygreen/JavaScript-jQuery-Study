@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>접속시 띄우는 팝업창</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+<link rel="stylesheet" href="css/pop2.css">
+</head>
+<body onload="openPopup();">  <!--onload 문서의 로딩시 바로 불러내는 자바스크립트 이벤트-->
+<!--Popup Start-->
+<div id="popup">
+	<script type="text/javascript" src="js/m_layer.js"></script><!-- 팝업창 스트립트(반드시 연결)-->
+	<div class="body">
+		<div class="btn_close">
+			<input name="checkbox" type="checkbox" style="margin-top:3px;" onClick="
+				if (this.checked === true)
+				{
+					setCookie('aaaa', 'done', 1);
+					document.all.popup.style.visibility='hidden';
+				}
+				">
+			<span class="tt">오늘 하루 보지 않기</span><i class="material-icons">clear</i>
+		</div>
+		<div class="pop_content">
+			<ul class="clear">
+				<li><img src="image/pop1.jpg" alt="메인팝업창"></li>
+				<li><img src="image/pop2.jpg" alt="메인팝업창"></li>
+				<li><img src="image/pop3.jpg" alt="메인팝업창"></li>
+			</ul>
+		</div>			
+	</div>
+</div>
+<!--Popup End-->
+
+<div id="wrap">	
+	<div class="program">
+		<h3>모집중인과정</h3>
+		<div class="text">
+			<p>이젠아카데미학원<br>
+			우수훈련기관(3년인증) 등 3관왕 달성!!<span>+ 자세히 보기</span></p>            
+		</div>
+	</div>
+</div>
+
+
+<!-- Script Source -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/pop2.js"></script>
+
+<!--하루이상열지않기 연결된 스크립트-->
+<script  language='javascript' >
+	if(getCookie( "aaaa" )=="done"){document.all.popup.style.visibility='hidden';}
+</script>
+</body>
+</html>

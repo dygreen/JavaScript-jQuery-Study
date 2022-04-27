@@ -1,0 +1,80 @@
+@import url(common.css);
+
+body{background:#ccc;}
+
+/* popup */
+
+#popup{ /*뒤에 나오는 검정배경*/
+	width:100%; 
+	height:100%; 
+	position:fixed; 
+	left:0; 
+	top:0; 
+	background:rgba(0,0,0, 0.8); 
+	z-index:9999; 
+	display:none; 
+}
+
+#popup .body{  /*띄워지는 팝업창*/
+	position:fixed; 
+	left:20%; 
+	top:20%; 
+	background:#fff;
+}
+
+.pop_content ul li{float:left;}
+
+.body .btn_close{
+	text-align:right;
+	background:#000;
+	position:relative;
+}
+.body .btn_close input{
+	position:absolute;
+	top:5px;
+	right:135px;
+}
+.body .btn_close .tt{
+	color:#fff;
+	font-size:12px;
+	position:absolute;
+	top:6px;
+	right:30px;
+}
+.body .btn_close i{ /*아이콘폰트*/
+	padding-right:5px;
+	color:#fff;
+	cursor:pointer;
+}
+
+
+
+/* CONTNET */
+
+.program{
+	position:absolute;
+	top:300px;
+	left:500px;
+}
+.text{
+	width:349px;
+	height:183px;
+	background:url(../image/main_07.png);
+	position:relative;
+}
+.text p{
+	position:absolute;
+    left:5px;
+    bottom:0;
+    width:335px;
+    padding:5px;
+	font-size:16px;
+}
+.text span{
+	font-size:10px;
+    float:right;
+    background-color:#fff;
+    padding:2px 5px;
+    border-radius:10px;
+	cursor:pointer;
+}

@@ -1,0 +1,62 @@
+@import url(common.css);
+
+body{background:#ccc;}
+
+/* popup */
+
+#popup{
+	display:none;
+	position:relative;
+	z-index:99999;
+}
+#popup.active{display:block;}   /*팝업창보이기->제이쿼리에서 불러냄*/
+
+#popup .body{  /*띄워지는 팝업창*/
+	position:fixed; 
+	left:50px; 
+	top:100px; 
+	background:#fff;
+	border:1px solid #ccc;
+}
+#popup .body .button{
+	padding:5px 0;
+	text-align:center;
+}
+#popup .body .button button{ /*close버튼설정*/
+	padding:6px 12px; 
+	border:none; 
+	border-radius:6px; 
+	background:#009688; 
+	color:#fff;
+}
+
+
+/* CONTNET */
+
+.program{
+	position:absolute;
+	top:300px;
+	left:500px;
+}
+.text{
+	width:349px;
+	height:183px;
+	background:url(../image/main_07.png);
+	position:relative;
+}
+.text p{
+	position:absolute;
+    left:5px;
+    bottom:0;
+    width:335px;
+    padding:5px;
+	font-size:16px;
+}
+.text span{
+	font-size:10px;
+    float:right;
+    background-color:#fff;
+    padding:2px 5px;
+    border-radius:10px;
+	cursor:pointer;
+}

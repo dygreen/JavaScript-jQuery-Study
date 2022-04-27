@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>팝업창 띄우기</title>
+
+<style>
+.close_style{
+	color:#666;
+	font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<!-- //////////// 팝업1 -->
+<div id="Notice1" style="position:absolute;left:0px;top:0px;z-index:1001;display:;" onMouseOver="dragObj=Notice1;drag=1;move=0" onMouseOut="drag=0">
+	<script src="popup/m_layer.js"></script>		
+	<table bgcolor="#fff" width="350px" cellpadding="0" cellspacing="0" style="border:1 solid #ccc;">
+		<tr>
+			<td><img src="popup/pop1.jpg" border="0" useMap="#Map100"></td>
+		</tr>
+		<tr> 
+			<td align="right" valign="middle">
+				<input name="checkbox" type="checkbox" style="margin-top:3px;" onClick="
+				if (this.checked === true)
+				{
+					setCookie('aaaa', 'done', 1);
+					document.all.Notice1.style.visibility='hidden';
+				}
+				"><span class="close_style">오늘 하루 보지않기</span>&nbsp;&nbsp;
+
+				<span style="cursor:hand" onClick="document.all.Notice1.style.visibility='hidden';"><span class="close_style">닫기</span></span>
+			</td>
+		</tr> 
+	</table>
+</div>
+<map name="Map100">
+<area shape="rect" coords="159,572,338,614" href="#" target="_blank">
+</map>
+
+ 
+
+ <!-- //////////// 팝업2 -->
+<div id="Notice2" style="position:absolute;left:350px;top:0px;z-index:1002;display: ;" onMouseOver="dragObj=Notice2;drag=1;move=0" onMouseOut="drag=0">
+	<script  language='javascript' src="popup/m_layer.js"></script>		
+	<table bgcolor="#fff" width="350px" cellpadding="0" cellspacing="0" style="border:2 solid #ccc;">
+		<tr>
+			<td><img src="popup/pop3.jpg" border="0"></td>
+		</tr>
+		<tr> 
+			<td align="right" valign="middle">			
+				<input name="checkbox" type="checkbox" onClick="
+				if (this.checked === true)
+				{
+					setCookie('bbbb', 'done', 1);
+					document.all.Notice2.style.visibility='hidden';
+
+				}
+				"><span class="close_style">오늘 하루 보지않기</span>&nbsp;&nbsp;
+				
+				<span style="cursor:hand" onClick="document.all.Notice2.style.visibility='hidden';"><span class="close_style">닫기</span></span>  
+			</td>
+		</tr>
+	</table>
+</div>
+
+ 
+<script  language='javascript' >
+	if(getCookie( "aaaa" )=="done"){document.all.Notice1.style.visibility='hidden';}
+	if(getCookie( "bbbb"  =="done"){document.all.Notice2.style.visibility='hidden';}
+</script>
+
+</body>
+</html>
