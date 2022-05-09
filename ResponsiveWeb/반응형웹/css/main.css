@@ -1,0 +1,925 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+#wrap{
+  background: #cde9e9;
+  width: 100%;
+}
+
+a,span{display: block;}
+
+/* _________________________ PC 기준으로 */
+/* * 기준은 media query를 쓰지 않음 */
+#moheader{display: none;}
+
+#ptheader{
+  width: 100%;
+  max-width: 1200px; /* 최대 가로폭 1200px을 넘지 않게 함 */
+  background: #3ab9bd;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap; /* 박스가 세로로 한줄씩 배치 */
+}
+
+/* /////////////////// 유틸메뉴 */
+#ptheader .topUtil{
+  height: 50px;
+  background: #1b9798;
+  padding-right: 50px;
+}
+
+.utilmenu{
+  height: 50px; /* 부모에 높이가 들어가야 함 */
+  display: flex;
+  justify-content: flex-end; /* 아이템을 끝점으로 정렬 */
+  align-items: center; /* 수직축방향으로 아이템들을 가운데로 정렬(*height 필수) */
+}
+
+.utilmenu li{
+  color: #fff;
+  font-size: 13px;
+  font-size: 0.813rem;
+}
+
+.utilmenu li .icon1{ /* 아이콘 폰트 */
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* /////////////////// 탑 메뉴 */
+#ptheader .topMenu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 30%; /* #✔ */
+  padding: 10px 0 0 50px;
+}
+.logo img{height: 50px;}
+
+.gnb{
+  width: 70%; /* #✔ */
+  background: #3ab9bd;
+}
+.gnb .gnbmenu{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around; /* #✔ */
+  align-items: center;
+  /* background: pink; */
+}
+
+.gnb .gnbmenu li{ 
+/*   margin: 0 30px;
+  height: 70px;
+  line-height: 70px; */
+  position: relative;
+  color: #daebeb;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.gnb .gnbmenu li a span{ /* 주메뉴 오버시 나오는 가로선 */
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  margin: 0 auto;
+  background: #f6d3e1;
+}
+
+
+/* /////////////////// 비주얼 영역 */
+#visual{
+  width: 100%;
+  max-width: 1200px; /* ✔ */
+  margin: 0 auto;
+  position: relative;
+}
+
+#visual h2{ /* 비주얼 텍스트 */
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #fff;
+  font-size: 50px;
+  font-size: 3.125rem;
+  font-family: 'Gugi', cursive;
+  font-weight: 400;
+  line-height: 70px;
+  letter-spacing: 5px;
+}
+
+#visual h2 .tcolor{
+  color: #f7a42d;
+  font-size: 65px;
+  font-size: 4.063rem;
+}
+
+/* pc에서는 1번째 이미지만 보이게 함 */
+.visual_image li:nth-child(2),
+.visual_image li:nth-child(3){display: none;}
+.visual_image li:nth-child(1){display: block;}
+
+.visual_image li img{ /* 가변이미지 */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* /////////////////// 섹션영역 */
+section{
+  display: flex;
+  flex-flow: row wrap; /* 가로로 여러줄 배치*/
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box; /* 반응형✔ */
+  margin: 10px auto;
+}
+
+/* ____section1 */
+.section1{
+  display: flex;
+  width: 100%;
+}
+
+.section1 a{
+  width: 25%;
+  height: 130px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section1 img{
+  width: 35%;
+  max-width: 35%;
+}
+
+.section1 a:nth-child(1){background: #9977c4;}
+.section1 a:nth-child(2){background: #bf73be;}
+.section1 a:nth-child(3){background: #f075a4;}
+.section1 a:nth-child(4){background: #f494ba;}
+
+.section1 a span{ /* 아이콘 설명 텍스트 */
+  color: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+
+/* ____section2 */
+.section2{
+  width: 40%;
+  height: 350px;
+  background: #9cd2a1;
+  margin: 10px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 모서리 접힌 부분............ */
+.section2:after{display: none;}
+.section2:before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  border-top: 20px solid #cde9e9; /* body 배경색상 */
+  border-right: 20px solid #64b18b; /* 접힌종이색상 */
+  border-bottom: 20px solid #64b18b; /* 접힌종이색상 */
+  border-left: 20px solid #cde9e9; /* body 배경색상 */
+}
+
+.section2>p{ /* 섹션제목 */
+  padding: 30px 0;
+  font-size: 20px;
+  font-size: 1.250rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.section2 ul{
+  display: flex;
+  width: 80%;
+  height: auto; /* auto -> 원래크기 또는 컨텐츠가 있는 만큼 */
+  margin: 0 auto;
+}
+
+.section2 ul li{
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: pink; */
+}
+
+.section2 ul li img{
+  width: 30%;
+  height: auto;
+  padding: 30px;
+  background: #64b18b;
+}
+
+.section2 ul li:hover img{background: #4a8d5f;}
+.section2 ul li span{ /* 아이콘 밑에 있는 글자 */
+  padding-top: 20px;
+  color: #fff;
+}
+
+
+/* ____section3 */
+.section3{
+  width: 30%;
+  height: 350px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.section3 ul li{
+  width: 100%;
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section3 ul li:nth-child(1){
+  background: url(../image/education_img.png) no-repeat left bottom #768cc6;
+  background-size: 40%;
+  margin-bottom: 10px;
+}
+.section3 ul li:nth-child(2){
+  background: url(../image/examination.png) no-repeat left bottom #768cc6;
+  background-size: 40%;
+}
+
+.section3 ul li a{
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section3 ul li .s3_title{
+  font-size: 17px;
+  font-size: 1.063rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.section3 ul li .s3_text{
+  width: 70%;
+  color: #e8e8e8;
+}
+
+
+/* ____section4 */
+.section4{
+  width: 28.3%;
+  /* -> 사용한 여백 px을 %로 계산한 후 영역너비 30%에서 뺀다. 
+  좌우여백 20px(나누기)상위부모너비 1200px(곱하기)100=1.666666666666667% -> 6이 14번
+  섹션4의 너비폭은 30% - 1.666666666666667% = 28.33333333333333%
+  */
+  height: 350px;
+  background: #aad6d7;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.section4 ul{
+  position: relative;
+  margin: 60px auto;
+  height: 60%;
+  width: 65%;
+  /* background: pink; */
+}
+
+.section4 ul li{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section4 ul li:first-child{display: block;}
+.section4 ul li img{
+  width: 100%;
+  height: auto;
+}
+
+
+/* ____section5 */
+.section5{
+  width: 32.5%;
+  height: 270px;
+  background: #f4cd88;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.section5 ul li a{
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #fbd89e;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section5 ul li a:hover{background: #f9c079;}
+
+.section5 ul li a img{height: 60px;}
+
+
+/* ____section6 */
+.section6{
+  width: 33%;
+  height: 270px;
+  background: #f0a2a8;
+  position: relative;
+  margin: 0px 10px 10px;
+  box-sizing: border-box;
+}
+
+/* 모서리 접힌 부분............ */
+.section6:after{display: none;}
+.section6:before{
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 20px solid #cde9e9; /* body 배경색상 */
+  border-right: 20px solid #cde9e9; /* body종이색상 */
+  border-bottom: 20px solid #d87899; /* 접힌종이색상 */
+  border-left: 20px solid #d87899; /* 접힌종이색상 */
+}
+
+.section6>p{
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.section6 ul li{
+  border-bottom: 1px solid #efd8e3;
+  background: #fff;
+  padding: 6px 0px 6px 15px;
+  text-align: left;
+  color: #666;
+}
+
+/* ____section7 */
+.section7{
+  width: 32.8%;
+  height: 270px;
+  background: #b1928f;
+  position: relative;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.section7 p{
+  padding-top: 35px;
+  text-align: center;
+}
+
+.section7 p img{height: 50px;}
+.section7 p span{
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.section7 ul{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap; /* 왼쪽에서 오른쪽으로 배치, 줄바꿈 => flex-wrap: wrap;*/
+  justify-content: space-around;
+}
+
+.section7 ul li{
+  width: 45%;
+  height: 40px;
+  border: 1px solid #eddbd4;
+  color: #eddbd4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section7 ul li:hover{background: #795c59;}
+
+
+/* /////////////////// 푸터영역 */
+footer{
+  width: 100%;
+  height: 400px;
+  background: url(../image/footer.png) repeat-x bottom center;
+}
+
+.footer_in{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column; /* 박스를 위에서 아래로 배치 */
+}
+
+/* 푸터유틸메뉴 */
+.f_util{margin-top: 30px;}
+.f_util ul{
+  display: flex;
+  /* justify-content: flex-start; -> 기본이므로 생략가능 */
+}
+
+.f_util ul li{
+  margin: 0 10px;
+  color: #fff;
+}
+
+/* 패밀리 사이트 */
+.family_site{
+  width: 130px;
+  margin: 20px 0 0 15px;
+  position: relative;
+}
+
+.family_site dt{
+  font-size: 13px;
+  height: 40px;
+  line-height: 40px;
+  background: #157d84;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.family_site dt .arrow{ /* 아이콘 폰트 */
+  float: right;
+  padding-right: 10px;
+  padding-top: 7px;
+  vertical-align: middle;
+}
+
+.family_site dd{
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+}
+
+.family_site dd ul{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #124a4a;
+  text-indent: 10px;
+}
+
+.family_site dd ul li a{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  border-top: 1px solid #255c5c;
+}
+
+/* 푸터 아이콘 */
+.f_icon ul{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  /* background: yellow; */
+}
+
+.f_icon ul li img{width: 50px;}
+.f_icon ul li{margin: 0 10px;}
+.f_icon ul li img{width: 50px;}
+
+/* 푸터 로고&주소 */
+.foot_copy{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+footer h2 img{height: 50px;}
+
+.copy{
+  margin: 10px 0 0 10px;
+  color: #fff;
+}
+
+.address ul li{
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+/* _________________________ Tablet */
+/* 768~1199범위의 해상도 */
+@media screen and (min-width: 768px) and (max-width: 1199px){
+
+  #ptheader{
+    width: 100%;
+    max-width: 100%; /* 1200px -> 100%로 변경 */
+    flex-flow: column wrap; /* 박스가 세로로 한줄씩 배치 */
+  }
+
+
+  /* /////////////////// 유틸메뉴 */
+  #ptheader .topUtil{
+    height: 35px;
+    background: #3cb9bd;
+    padding-right: 0px;
+  }
+
+  .utilmenu{
+    height: 35px; /* 부모에 높이가 들어가야 함 */
+  }
+
+  .utilmenu li{
+    padding: 10px;
+    background: #1b9798;
+  }
+
+  .utilmenu li .icon1{ /* 아이콘 폰트 */
+    display: none;
+  }
+
+  /* /////////////////// 탑 메뉴 */
+  #ptheader .topMenu{flex-direction: column;}
+
+  .logo{
+    width: 100%; /* #✔ */
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .gnb{
+    width: 100%; /* #✔ */
+    background: #1b9798;
+  }
+
+  .gnb .gnbmenu li a span{ /* 주메뉴 오버시 나오는 가로선 */
+    display: none;
+    background: transparent;
+  }
+
+  /* /////////////////// 비주얼 영역 */
+  #visual{
+    width: 100%;
+    max-width: 100%; /* ✔ */
+  }
+
+  #visual h2{ /* 비주얼 텍스트 */
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: #fff;
+    font-size: 36px;
+    font-size: 2.250rem;
+    line-height: 55px;
+    letter-spacing: 0px;
+  }
+
+  #visual h2 .tcolor{
+    font-size: 48px;
+    font-size: 3rem;
+  }
+
+  /* pc에서는 1번째 이미지만 보이게 함 */
+  .visual_image li:nth-child(1),
+  .visual_image li:nth-child(3){display: none;}
+  .visual_image li:nth-child(2){display: block;}
+
+
+  /* /////////////////// 섹션영역 */
+  section{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ____section1 */
+  .section1 a{flex-direction: column;}
+
+  .section1 img{
+    width: 30%;
+    max-width: 30%;
+  }
+
+  /* ____section2 */
+  .section2{
+    width: 59%;
+    margin: 1% 1% 1% 0;
+  }
+
+  .section2 ul{flex-direction: column;}
+
+  .section2 ul li{
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #64b18b;
+    margin-bottom: 10px;
+  }
+
+  .section2 ul li img{
+    width: 20%;
+    padding: 0px;
+  }
+
+  .section2 ul li:hover img{background: transparent;}
+  .section2 ul li span{ /* 아이콘 밑에 있는 글자 */
+    padding-top: 0px;
+  }
+
+  /* ____section3 */
+  .section3{
+    width: 40%;
+    margin: 1% 0;
+  }
+
+  /* ____section4 */
+  .section4{ /* 태블릿에서 보이지 않음 */
+    display: none; 
+  }
+
+
+  /* ____section5 */
+  .section5{
+    width: 45%;
+    margin: 0px 1% 10px 0;
+  }
+
+  /* ____section6 */
+  .section6{
+    width: 54%;
+    margin: 0px;
+  }
+
+  /* ____section7 */
+  .section7{
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .section7 ul li{
+    border: none;
+    background: #795c59
+  }
+
+  /* /////////////////// 푸터영역 */
+  footer{
+    height: 200px;
+    background: #39b9ba;
+  }
+
+  .footer_in{
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  /* 푸터 유틸 메뉴 */
+  .f_util{display: none;}/* 태블릿에서 보이지 않게 함 */
+
+  /* 패밀리 사이트 */
+  .family_site{
+    display: none; /* 태블릿에서 보이지 않게 함 */
+  }
+
+  /* 푸터 로고&주소 */
+  .foot_copy{justify-content: space-around;}
+  .address ul li:nth-child(4), .address ul li:nth-child(5){display: none;} /* 서울사무소 주소 안보이게 함 */
+}
+
+
+/* _________________________ Mobile */
+/* 767이하~ 범위의 해상도 */
+@media screen and (max-width: 767px){
+
+  #ptheader{display: none;}
+  #moheader{display: block;}
+
+  /* ///////////////// 모바일 헤더영역 */
+  /* .mo_view{display: none;} */
+
+  #moheader .mo_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #moheader .mo_view{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 60%; /* 모바일메뉴 가로폭 -> jQuery에서 이동 */
+    height: 100%;
+    z-index: 10000;
+    background: #298888;
+  }
+
+  .mo_menu_btn img{
+    height: 45px;
+    cursor: pointer;
+  }
+
+  .logo{padding: 0px 0px 0px 10px;}
+  .logo img{height: 40px;}
+
+  .mognb ul li.close{ /* 닫기버튼 */
+    position: absolute;
+    top: 0;
+    right: 100%;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+  }
+
+  .mo_view .mognb ul li.close img{width: 100%;}
+
+  .mognb ul li:not(.close){
+    width: 100%;
+    height: 60px;
+    color: #daebeb;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #124a4a;
+    border-bottom: 1px solid #255c5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ///////////////// 유틸메뉴 */
+  .top_util{
+    position: fixed;
+    right: 0%;
+    top: 400px;
+    z-index: 20000;
+    width: 60%;
+    height: 50px;
+    background: transparent;
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .moutilmenu{
+    margin: 100px auto 0;
+    width: 80%;
+  }
+
+  .moutilmenu ul li{
+    height: 40px;
+    background: #469f9f;
+    color: #fff;
+    font-size: 13px;
+    font-size: 0.813rem;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* /////////////////// 비주얼 영역 */
+  #visual{
+    width: 100%;
+    max-width: 100%; /* ✔ */
+  }
+
+  #visual h2{display: none;} /* 모바일에서는 메인글자 안보이게 함 */
+
+  /* pc에서는 1번째 이미지만 보이게 함 */
+  .visual_image li:nth-child(1),
+  .visual_image li:nth-child(2){display: none;}
+  .visual_image li:nth-child(3){display: block;}
+
+  /* /////////////////// 섹션영역 */
+  section{
+    flex-flow: column; /* 세로로 배치 */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ____section1 */
+  .section1 a span{display: none;} /* 모바일에서는 아이콘 설명텍스트 안보이게 함 */
+  .section1 img{
+    width: 45%;
+    max-width: 45%;
+  }
+
+  /* ____section2 */
+  .section2{
+    width: 100%;
+    height: auto;
+  }
+
+  /* ____section3 */
+  .section3{
+    width: 100%;
+    margin: 0;
+  }
+
+  /* ____section4 */
+  .section4{ /* 태블릿에서 보이지 않음 */
+    display: none; 
+  }
+
+
+  /* ____section5 */
+  .section5{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* ____section6 */
+  .section6{
+    width: 100%;
+    margin: 0px;
+  }
+
+  /* ____section7 */
+  .section7{
+    width: 100%;
+    height: auto; /* ✔ 컨텐츠가 자식이 있는 만큼 넓히는 것 */
+    margin-top: 10px;
+  }
+
+  .section7 ul{
+    width: 90%;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-flow: column wrap; /* 위에서 아래로 배치, 줄바꿈 */
+  }
+
+  .section7 ul li{
+    width: 100%;
+    border: none;
+    background: #795c59
+  }
+
+  /* /////////////////// 푸터영역 */
+  footer{
+    height: 120px;
+    background: #39b9ba;
+  }
+
+  .footer_in{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column; /* 박스를 위에서 아래로 배치 */
+  }
+
+  /* 푸터 유틸 메뉴 */
+  .f_util{display: none;}/* 태블릿에서 보이지 않게 함 */
+
+  /* 패밀리 사이트 */
+  .family_site{
+    display: none; /* 태블릿에서 보이지 않게 함 */
+  }
+
+  /* 푸터 아이콘 */
+  .f_icon ul{justify-content: center;}
+  .f_icon ul li{margin: 0 5px;}
+  .f_icon ul li img{width: 45px;}
+
+  /* 푸터 로고&주소 */
+  .foot_logo h2{display: none;}
+  .foot_copy{
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .address{display: none;}
+  
+}
+

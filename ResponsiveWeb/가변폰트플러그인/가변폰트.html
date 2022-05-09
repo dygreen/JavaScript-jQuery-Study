@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>가변폰트</title>
+<style>
+*{margin:0;padding:0;}
+
+
+
+</style>
+</head>
+<body>
+
+	<p>
+	em 단위!
+		<span>rem 단위!</span>
+	</p>
+	
+	
+</body>
+</html>
+
+<!-- 
+em:상대적인 단위,대문자 M의 너비를 1em으로 표현한것으로, 16px이 1em에 해당된다.
+
+em단위는 자신의 부모박스의 글자크기를 상속받는다.
+rem은 최상위, 즉 <html>태그를 기준으로 하기 때문에 상속문제가 발생하지 않음
+
+*진정한 가변폰트-vw,vh,vmin,vmax
+
+앞의 가변폰트(rem)는 em단위의 글자크기로 인해 발생하는 상속문제를 해결하는 방법일뿐,
+글자가 브라우저의 비율에 따라 줄어들거나 늘어나지는 않으므로 실제로 가변폰트라고 보기는 어렵다.
+브라우저의 비율에 따라 글자크기가 늘어나거나 줄어드는 css3의 새로운 가변단위이다.
+
+vw:웹브라우저의 너비를 100을 기준으로 하여 크기를 결정
+
+만약 웹 브라우저의 너비가 1280이고, 폰트 크기를 10vw라고 한다면
+이 때 10vw의 크기는 1280의 1%인 12.8px이 되는 것이다.
+
+(vw단위적용글자크기값) * 브라우저의 너비값) / 100 =크기값
+  -> 1280*0.01=12.8px
+
+vh:웹브라우저의 높이를 100을 기준으로 하여 크기를 결정
+
+vmin:웹브라우저의 너비와 높이 중 작은쪽을 기준으로 하여 크기결정
+vmax:웹브라우저의 너비와 높이 중 큰쪽을 기준으로 하여 크기결정
+-->

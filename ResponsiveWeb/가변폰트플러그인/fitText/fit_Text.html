@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>fitText</title>
+<style type="text/css">
+/* reset */
+ul { list-style:none; margin:0; padding:0; }
+img { border:0; }
+
+/* base */
+body {margin:0; font:20px "나눔고딕"; color:#767676; background:lightyellow; }
+
+</style>
+
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.fittext.js"></script>
+
+<script type="text/javascript">
+$(function(){ 
+
+		$("#t1").fitText();
+		$("#t2").fitText(1.5); 
+		$("#t3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
+});
+</script>
+</head>
+
+<body>
+
+
+
+		<p id="t1">Squeeze with FitText</p>
+		<p id="t2">Squeeze with FitText</p>
+		<p id="t3">Squeeze with FitText</p>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
