@@ -1,0 +1,171 @@
+@import url(common.css);
+
+/* ----------->> header <<----------- */
+
+header {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	/*비주얼보다 위에 올라오게 함*/
+	width: 100%;
+	height: 70px;
+	background: #34343d;
+}
+
+header h1 {
+	padding: 10px 15px;
+}
+
+/*로고*/
+header h1 img {
+	width: 120px;
+}
+
+/*로고 사이즈 줄임*/
+
+.gnb {
+	width: 100%;
+	height: 324px;
+	background: rgba(0, 0, 0, 0.9);
+	position: absolute;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+}
+
+.gnb .gnb_list {
+	padding-top: 70px;
+}
+
+.gnb .gnb_list li {
+	height: 50px;
+	line-height: 50px;
+}
+
+.gnb .gnb_list li a {
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.gnb .gnb_list li a:hover {
+	color: #3da5bb
+}
+
+.menu_toggle_btn {
+	/*메뉴토글버튼*/
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	z-index: 3000;
+	width: 40px;
+	height: 40px;
+	background: none;
+	outline: none;
+	border: none;
+	margin: 0;
+	cursor: pointer;
+}
+
+.menu_toggle_btn:before,
+.menu_toggle_btn:after {
+	/* 비어있는 태그를 하나 더 만드는 것 
+	 ex) <span></span>
+	*/
+	/* x button */
+	position: absolute;
+	left: 0;
+	width: 70%;
+	height: 4px;
+	background: #fff;
+	content: '';
+	transition: all 0.3s;
+	margin-left: 15%;
+}
+
+.menu_toggle_btn:before {
+	transform: translateY(-12px);
+}
+
+.menu_toggle_btn:after {
+	transform: translateY(8px);
+}
+
+/*jquery에서 불러낼 클래스 "menu-open" */
+.menu_toggle_btn.menu-open:before {
+	transform: translateY(0px) rotate(135deg);
+}
+
+.menu_toggle_btn.menu-open:after {
+	transform: translateY(0px) rotate(-135deg);
+}
+
+
+
+/* ----------->> container <<----------- */
+
+#container .main_visual img {
+	/*비주얼 가변이미지*/
+	width: 100%;
+	max-width: 100%;
+}
+
+#container .quick_link li {
+	float: left;
+	width: 33.33%;
+	height: 80px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.material-icons {
+	/*ICON FONT*/
+	color: #fff;
+	font-size: 36px;
+}
+
+#container .quick_link li span {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+#container .quick_link li:nth-child(1) {
+	background: #d6706a;
+}
+
+#container .quick_link li:nth-child(2) {
+	background: #9aa2a1;
+}
+
+#container .quick_link li:nth-child(3) {
+	background: #6a7390;
+}
+
+
+
+/* ----------->> footer <<----------- */
+
+footer {
+	width: 100%;
+	background: #27272e;
+	text-align: center;
+	padding-top: 20px;
+}
+
+footer img {
+	width: 120px;
+}
+
+footer .copyright {
+	padding: 15px 0;
+	text-align: center;
+	font-size: 16px;
+	font-size: 1rem;
+	color: #fff;
+}
