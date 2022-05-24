@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>swiper</title>
+
+<link href="css/swiper.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+/* swiper */
+.gallery1 { overflow:hidden; position:relative; margin:0 auto; width:1032px; height:630px; border:1px dashed skyblue; } /* 갤러리 전체영역 설정 */
+.gallery1 .nav1 { position: absolute; left:0px; bottom:0px; text-align: center;  z-index: 10; } /* 메뉴영역 설정 */
+.gallery1 .nav1 .swiper-pagination-bullet { background-color:orange; opacity:0.5; width:10px; height:10px; margin-left:5px; border-radius:0; } /* 메뉴 설정 */
+.gallery1 .nav1 .swiper-pagination-bullet-active{ background-color:blue; opacity:1; } /* 메뉴on 설정 */
+.gallery1 .swiper-button-prev, 
+.gallery1 .swiper-button-next { position:absolute; top:50%; width:27px; height:44px; margin-top:-22px; z-index:10; cursor:pointer; background-size:cover; }
+.gallery1 .swiper-button-prev { left:50px; /* background:url(); */ } /* 이전버튼 */
+.gallery1 .swiper-button-next { right:50px; /* background:url(); */ } /* 다음버튼 */
+</style> 
+
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript">
+$(function () {
+
+   var mySwiper1 = new Swiper ('.gallery1', {
+     loop: true, //순환유무	 
+     pagination: '.nav1', //네비게이션class명
+	 grabCursor: true, //커서 손모양
+	 autoplay: 3000, //자동진행
+	 effect: 'flip', // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+     //이전 다음 버튼
+     nextButton: '.swiper-button-next',
+     prevButton: '.swiper-button-prev',
+   })
+
+});
+</script>
+
+</head>
+<body>
+
+
+
+<div class="gallery1">
+
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+    </div>
+
+    <div class="nav1"></div>
+
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+
+</div>  
+
+
+
+
+</body>
+</html>
