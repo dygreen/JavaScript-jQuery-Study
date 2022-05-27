@@ -1,0 +1,153 @@
+/* @import url(common.css); */
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+*{box-sizing: border-box;}
+
+body{
+  font-family: "Raleway",sans-serif;
+  margin: 0;
+  color: #222;
+  line-height: 1.6rem;
+  background-color: #f8f8f8;
+  height: 100vh; /* 모니터에 꽉 차게 쓸 때 */
+  display: grid; /* 무조건 가로 100% */
+  justify-content: center;
+}
+
+/* Portfolio Section */
+.portfolio {margin: 15px;}
+
+.portfolio h1{
+  font-family: "Montserrat",sans-serif;
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.portfolio h1:before{
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: crimson;
+  position: absolute;
+  left: 50%; /* ✔ 정가운데 정렬법 */
+  bottom: 0;
+  transform: translateX(-50%); /* ✔ */
+}
+
+.portfolio h1 span{color: crimson;}
+
+.portfolio .items{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 15px;
+}
+
+.portfolio .items .focus{
+  /* grid-column: span 2; -> 세로로 2칸 합치기 */
+  /* grid-row: span 2; -> 가로로 2칸 합치기 */
+  grid-area: span 2 / span 2; /* 축약형 */
+}
+
+.portfolio .items div{
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  overflow: hidden; /* ✔ 이미지가 넘칠 때 border-radius 제대로 적용 안될 때 */
+  position: relative;
+}
+
+.portfolio .items div a img{
+  width: 100%;
+  display: block; /* ✔ height가 먹지 않을 때 img(inline-block)이므로 꽉차게 */
+}
+
+.portfolio div span, .items div i, .items div:before{
+  transition: 0.35s;
+  pointer-events: none; /* a태그 손가락 모양+링크 연결 가능하도록 하는 = (a태그를 막고 있는 것에다 걸기)마우스 이벤트를 받지말라 */
+}
+
+.portfolio .items div i{
+  position: absolute;
+  top: 50%; /* ✔ */
+  left: 50%; /* ✔ */
+  transform: translate(-50%,-50%) scale(0.2); /* ✔ */
+  font-size: 40px;
+  color: #fff;
+  opacity: 0;
+}
+.portfolio .items div:hover i{
+  transform: translate(-50%,-50%) scale(1);
+  opacity: 1;
+}
+
+.portfolio .items div span{
+  position: absolute;
+  bottom: -400px;
+  width: 100%; /* 가운데 정렬: text-align: center의 기준 width를 잡아줌 */
+  text-align: center; /* ✔ */
+  color: #fff;
+}
+.portfolio .items div:hover span{bottom: 0;}
+
+.portfolio .items div:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+}
+.portfolio .items div:hover:before{opacity: 1;}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1366px){ /* 최신 아이패드 맞춤: 1366px */
+  body{height: auto;}
+
+  .portfolio h1{font-size: 40px;}
+
+  .portfolio .items{grid-template-columns: repeat(3,1fr);}
+}
+
+
+/* Mobile */
+@media (max-width: 768px){
+  body{height: auto;}
+
+  .portfolio h1{font-size: 30px;}
+
+  .portfolio .items{grid-template-columns: repeat(1,1fr);}
+  
+  .portfolio .items .focus{grid-area: span 1 / span 1; /* 축약형 */}
+}
+
+/* featherlight Custom CSS */
+.featherlight .featherlight-content {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-height: 100% !important;
+  width: 100%;
+  height: 100%;
+}
+
+.featherlight .featherlight-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.featherlight .featherlight-close-icon {
+  top: 90% !important;
+  left: 30px !important;
+  line-height: 50px !important;
+  width: 50px !important;
+  font-size: 28px;
+  background-color: crimson !important;
+  color: #fff !important;
+  border-radius: 50%;
+}
