@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Variables */
+// $변수명:값;
+$primary-btn: skyblue;
+$secondary-btn: yellowgreen;
+$warning-btn: crimson;
+
+/* Buttons */
+.btns{
+  .btn{
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 3px;
+    color: #fff;
+  }
+  .primary{
+    background-color: $primary-btn;
+  }
+  .secondary{
+    background-color: $secondary-btn;
+  }
+  .warning{
+    background-color: $warning-btn;
+  }
+}

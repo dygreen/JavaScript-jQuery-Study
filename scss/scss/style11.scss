@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+// @import url("reset.css"); -> css파일을 불러올때
+
+@import "reset"; // scss파일을 불러올때
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Import SCSS Files(SCSS파일을 불러올때만 가능)
+@import "header";
+@import "footer";
+@import "variables";
+@import "fonts";
+*/

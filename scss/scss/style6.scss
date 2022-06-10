@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* .frame{
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+  .heading{
+    font-size: 36px;
+    color: crimson;
+    font-weight: normal;
+  }
+-> 이럴 경우에는 frame 안에 있는 heading 클래스만 적용할 수 있다. 다른 곳에도 동일하게 적용하고 할때는 @at-root를 사용함
+} */
+
+.frame{
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+  @at-root .heading{
+    font-size: 36px;
+    color: crimson;
+    font-weight: normal;
+  }
+}

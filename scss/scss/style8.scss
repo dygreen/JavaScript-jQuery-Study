@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+:is(header,section,footer) h1{
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/* 가상클래스 before와 after는 기본적으로 inline형식임 */
+:is(header,section,footer) h1:before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: crimson;
+  margin-right: 10px;
+  transform: translateY(4px); /* ✔ */
+}
+
+.frame :is(p,span){
+  font-size: 20px;
+}
+
+form{
+  &:is(input[type=text], input[type=email], input[type=password]){
+    
+  }
+}

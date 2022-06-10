@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+/* body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6rem;
+} */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+
+.portfolio p {
+  text-align: center;
+  text-overflow: hidden;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style7.css.map */

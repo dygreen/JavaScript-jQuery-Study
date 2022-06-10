@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>14-@mixin과@include활용</title>
+  <link rel="stylesheet" href="css/style14.css">
+</head>
+<body>
+  <div class="btns">
+    <button class="complete">완료</button>
+    <button class="loading">전송중</button>
+    <button class="error">오류</button>
+  </div>
+</body>
+</html>
+
+<!-- 
+  재사용할 그룹을 선언(정의,지정)하는 것은 @mixin
+  정의된 @mixin을 사용(포함)하는 것은 @include
+
+  @mixin 믹스인이름{
+    재사용할 스타일 속성
+  }
+
+  선택자{
+    @include 믹스인이름;
+  }
+ -->

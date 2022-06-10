@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Built-in Function: map-get */
+
+/* 다중변수
+$color: (
+  이름:값,
+  이름:값,
+  이름:값
+);
+*/
+
+$color:(
+  font-primary: #2d3436,
+  font-secondary: #636e72,
+  font-focus: #d63031,
+  bgc-primary: #dfe6e9,
+  bgc-secondary: #b2bec3
+);
+
+$headline-font:(
+  large: 45px,
+  medium: 32px,
+  small: 22px
+);
+
+$font-family:(
+  kor: 'Noto Sans KR',
+  eng: 'Montserrat'
+);
+
+//background-color(속성): map-get(변수이름, 변수가 가진배열 이름);
+body{
+  background-color: map-get($color, bgc-primary);
+  font-family: map-get($font-family, kor);
+}
+
+.frame{
+  h1{
+    color: map-get($color, font-focus);
+    font-size: map-get($headline-font, large);
+    font-family: map-get($font-family, eng);
+  }
+  h2{
+    font-size: map-get($headline-font, medium);
+    color: map-get($color, font-secondary);
+  }
+  h3{
+    font-size: map-get($headline-font, small);
+    color: map-get($color, bgc-secondary);
+  }
+}

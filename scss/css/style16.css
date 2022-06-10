@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+* {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* % Keyword with @extend */
+/* .shape{
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.212);
+} */
+/* %: 기능상의 차이는 없고 compile된 css에서 보이지 않도록 하는 것 */
+.card-item {
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.212);
+}
+
+.card {
+  display: flex;
+  gap: 30px;
+  /* flex에서도 gap을 사용할 수 있다✔ */
+}
+
+.card-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=style16.css.map */

@@ -1,0 +1,14 @@
+live sass complier: sass파일을 웹브라우저가 인식하는 css파일로 바꿔주는 기능(complier)을하는 익스텐션
+익스텐션의 setting Docs클릭 - 깃헙에서 example 복사
+setting-sass검색-live sass comiler-settings.json에 붙여넣기-you can add more~끝 삭제
+-savePath: "/css"로 바꾸기
+-scss 파일 작성 후 하단 watching scss 누르면 css파일이 생성됨
+-다른 파일 생성을 막으려면
+
+],
+"liveSassCompile.settings.autoprefix": null,
+    "liveSassCompile.settings.showOutputWindow": false
+}
+붙여넣기
+
+setting-sass show output window 체크하지 않기
