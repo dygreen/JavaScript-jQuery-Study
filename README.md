@@ -11,17 +11,23 @@
 * switch 선택문
 * 반복문 + 반복문 연습 문제 풀이
 * 함수 + 함수 연습 문제 풀이
+* 내장객체(`Date`, `Math`, `string`)
+* DOM 문서 객체, BOM 브라우저 객체
+* 배열 내장 함수(`forEach`, `map`, `filter`...)
+* ES6 최신문법(Template Literals, spread 연산자, Arrow function...)
+* API 호출하기(async function - await fetch - await .json)
+* movemenu(folder): vanilla JS, offset을 활용한 움직이는 활성화 메뉴바
 
 ### jQuery basic study
 * 선택자
 * 속성조작 메서드
 * 수치조작 메서드
-* 객체편짐 
+* 객체
 * 이벤트
 * animation
 * animate
 
-### 실습
+### jQuery 실습
 * jQuery를 사용하여 여러 형태의 '메뉴바' 제작
 * 여러 형태의 '이미지 슬라이드' 제작
 * '갤러리' 사진 보여주는 기능 제작
