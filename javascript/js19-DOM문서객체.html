@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js19-DOM문서객체</title>
+
+</head>
+
+<body>
+  <section>
+    <h2 id="title">웹퍼블리싱</h2>
+    <form>
+      <input type="text" name="myText">
+      <button>추가</button>
+    </form>
+    <ul class="list">
+      <li class="item">HTML/CSS</li>
+      <li class="item">자바스크립트</li>
+      <li class="item">제이쿼리</li>
+    </ul>
+  </section>
+  <p class="hello">안녕하세요.</p>
+  <hr>
+
+  <div class="example">
+    A div with class="example"
+  </div>
+  <div class="example">
+    B div with class="example"
+  </div>
+  <p class="example">
+    C p with class="example"
+  </p>
+  <p>
+    D <span class="example">span</span> with class="example"
+  </p>
+  <hr>
+
+  Cat: <input type="checkbox" name="animal" value="cats">
+  Dogs: <input type="checkbox" name="animal" value="dogs">
+  <p>Check the checkboxes that have a name="animal":</p>
+  <hr>
+
+  <h3>This is a p element</h3>
+  <h3>This is also a p element.</h3>
+  <h3>This is also a p element.
+  Change the background color of all p elements in this document:</h3>
+</body>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+  let title = document.getElementById('title');
+  console.log(title);
+
+  title.textContent = '리액트';
+
+  let items = document.getElementsByClassName("item");
+  console.log(items);
+  console.log('HTML/CSS :', items[0]);
+  console.log('자바스크립트 :', items[1]);
+  console.log('제이쿼리 :', items[2]);
+
+  let lilist = document.getElementsByTagName('li');
+  console.log(lilist);
+
+  let h2 = document.querySelector('#title');
+  console.log('h2 :', h2);
+
+  let itemAll = document.querySelectorAll('.item');
+  console.log('item :', itemAll);
+
+  // class="example"을 사용하여 모든 요소의 배경색을 변경
+  let collection1 = document.getElementsByClassName("example");
+  for( let i = 0; i < collection1.length; i++ ){
+    collection1[i].style.backgroundColor = "red";
+  }
+
+
+  // 이름이 "animal"이고 type="checkbox"인 모든 <input> 요소를 확인
+  let collection2 = document.getElementsByName("animal");
+  for(let j = 0; j < collection2.length; j++){
+    collection2[j].checked = true;
+  }
+  
+
+  // 모든 <p> 요소의 배경색 변경
+  let collection3 = document.getElementsByTagName("h3");
+  for ( let k = 0; k < collection3.length; k++){
+    collection3[k].style.backgroundColor = "yellow";
+  }
+
+</script>
+
+</html>
+
+<!--
+*문서객체모델(DOM)이란?
+문서객체모델(Documnet Object Model)은 XML이나 HTML문서에 접근하기 위한 일종의 인터페이스이다. 이 객체 모델은 문서 내의 모든 요소를 정의하고, 각각의 요소에 접근하는 방법을 제공한다.
+
+
+-지정된 ID를 가진 요소를 가져오기
+document.getElementById("id이름");
+
+-요소를 가져와서 색상을 변경한다.
+document.getElementById("id이름").style.color="red";
+
+-지정된 Class의 모든 요소 가져오기
+document.getElementsByClassName("class이름");
+document.getElementsByClassName("class이름 color");
+
+-input 요소 - 이름(name)이 "fname"인 모든 요소 가져오기
+document.getElementsByName("fname");
+
+-지정된 태그 이름의 요소 가져오기
+document.getElementsByTagName("태그이름");
+
+-문서에서 첫 번째 <p> 요소의 내부 HTML을 변경
+document.getElementsByTagName("p")[0].innerHTML = "Hello World!";
+
+
+*위의 3가지는 HTML 요소만 저장이 된다. 속성노드까지 자유롭게 제어하려면 querySelector를 사용해야 한다. 반환값이 하나라면 querySelector()메서드를 사용하고, 여러값이 한꺼번에 반환될 경우에는 querySelectorAll() 메서드를 사용한다.
+document.querySelector(선택자);
+document.querySelectorAll(선택자 또는 태그);
+
+*innerText 는 텍스트의 내용을 표시하고 innerHTML 은 HTML 태그까지 반영하여 표시한다.
+요소명.innerText = 내용;
+요소명.innerHTML = 내용;
+textContent : 해당 노드가 가지고 있는 텍스트 값을 그대로 가져옴
+
+
+*속성에 접근하려면 getAttribute() 메서드를 사용하고, 접근한 속성의 값을 바꾸려면 setAttribute() 메서드를 사용한다.
+getAttribute("속성명");
+setAttribute("속성명", "값");
+
+-->

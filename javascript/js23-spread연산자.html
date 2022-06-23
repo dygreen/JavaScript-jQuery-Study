@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js23-spread연산자</title>
+</head>
+
+<body>
+</body>
+
+<script>
+  const cookie = {
+    base: "cookie",
+    madeIn: "korea"
+  };
+
+  // spread 연산자 : 객체의 중복되는 요소를 펼쳐주는(복사) 기능
+  const chocochipcookie = {
+    // base: "cookie",
+    // madeIn: "korea",
+    ...cookie,
+    toping: "chocochip"
+  };
+
+  const blueberrycookie = {
+    // base: "cookie",
+    // madeIn: "korea",
+    ...cookie,
+    toping: "blueberry"
+  };
+
+  const strawberrycookie = {
+    // base: "cookie",
+    // madeIn: "korea",
+    ...cookie,
+    toping: "strawberry"
+  };
+
+  console.log(chocochipcookie);
+  console.log(blueberrycookie);
+  console.log(strawberrycookie);
+
+  const noTopingCookies = ["촉촉한 쿠키", "안촉촉한 쿠키"];
+  const topingCookies = ["바나나 쿠키","블루베리 쿠키","딸기 쿠키","초코칩 쿠키"];
+
+  const allCookies = [...noTopingCookies, ...topingCookies];
+  console.log(allCookies);
+
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js21-배열내장함수</title>
+</head>
+
+<body>
+</body>
+
+<script>
+  let names = [
+    "Steven Paul Jobs",
+    "Bill Gates",
+    "Mark Elloit Zuckerberg",
+    "Elon Musk",
+    "Jeff Bezos",
+    "Wwarren Edward Buffett",
+    "Larry Page",
+    "Larry Ellison",
+    "Tim Cook",
+    "Lloyd Blankfein"
+  ];
+
+  let ceoList = [
+    {name: "Larry Page", age: 23, ceo: true},
+    {name: "Time Cook", age: 40, ceo: true},
+    {name: "Elon Musk", age: 55, ceo: false}
+  ];
+
+  /* for(let i = 0; i < names.length; i++){
+    console.log(names[i]);
+  } */
+
+  function printName(item){
+    console.log(item); // item 은 forEach()가 알아서 줌
+  }
+  names.forEach(printName);
+  /* forEach가 지가 알아서 줌, forEach 가 알아서 회전을 하면서 매번 아이템을 하나씩 넘김,
+  모든 배열함수가 함수를 매개변수로 받음, 이 함수에 item을 매번 넣어준다.
+  */
+
+  // printName 함수가 다른데 쓰이지 않고 forEach안에서만 사용하기 때문에 이름없는 함수를 만들어도 가능하다.
+  names.forEach(function(item){
+    console.log(item);
+  });
+
+  // ES6 최신문법(화살표 함수)
+  names.forEach((item) => {console.log(item)});
+  // 반환값이 없기 때문에 굳이 변수를 만들어서 받을 필요가 없음
+
+  names.forEach((item, index) => console.log(item, index));
+
+
+
+  /* forEach와 다르게 결과를 보면 배열이 들어가 있다.
+  map은 반드시 배열을 반환한다. 원하는 데이터를 가지고 오고 싶을 때 map을 주로 사용한다.
+  */ 
+  let data0 = ceoList.map((item0) => {
+    // return item0.name
+    return item0.age;
+  });
+  console.log(data0);
+
+
+  let data2 = names.filter((item) => { // 조건을 넣고, 조건에 대해 참인 것만 반환됨(true인걸 다 반환)
+    return item.startsWith("L");
+  });
+  console.log("filter:", data2);
+
+
+  let data3 = names.some((item) => { // 조건에 충족하는 아이템이 하나라도 있으면 true 반환, 아니면 false.
+    // return item.startsWith("L")
+    return item.startsWith("A");
+  });
+  console.log("some:", data3);
+
+  
+  let data4 = names.every((item) => { // 모두가 그값이면 true반환, 아니면 false.
+    // return item.startsWith("L")
+    return item.length > 0;
+  });
+  console.log("every:", data4);
+
+
+  let data5 = names.find((item) => {
+    return item.startsWith("L");
+  });
+  console.log("find:", data5);
+
+
+  let data6 = names.findIndex((item) => {
+    return item == "Larry Page";
+  });
+  console.log("findIndex:", data6);
+</script>
+
+</html>
+
+<!-- 
+  배열 내장 함수 
+  forEach: 반환값이 없다, 단순 for문과 같이 작동한다.
+  map: 반환값을 배열에 담아 반환한다.
+  filter: 조건에 충족하는(true) 아이템만 배열에 담아 반환한다.
+  some: 조건에 충족하는 아이템이 하나라도 있으면 true 반환, 아니면 false.
+  every: 모든 배열에 아이템이 조건을 충족하면 true 반환, 아니면 false.
+  find: 조건에 충족하는 아이템 하나만 반환(여러개라면 첫번째 것만 반환)
+  findIndex: 조건에 충족하는 아이템의 인덱스값 반환(여러개라면 첫번째 아이템의 인덱스번호만 반환)
+ -->

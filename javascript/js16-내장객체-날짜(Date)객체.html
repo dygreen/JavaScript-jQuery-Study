@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js16-내장객체-날짜(Date)객체</title>
+
+  <style>
+    #output {
+      width: 400px;
+      height: 100px;
+      text-align: center;
+      padding-top: 50px;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="output">
+    <div id="date"></div>
+    <div id="clock">
+      00:00.00
+    </div>
+  </div>
+</body>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+  /* let d = new Date();
+    console.log(d);
+    console.log(d.getMonth());
+    console.log(d.getFullYear());
+    console.log(d.getHours());
+    console.log(d.getDay());
+    console.log(d.getMinutes()); */
+
+  /* 현재 날짜표시하기_________________________ */
+  let objDate = new Date();
+  let year = objDate.getFullYear(); //년 구하기
+  let month = objDate.getMonth(); //월 구하기 -> 0(1월)부터 11(12월)까지의 정수값
+  let date = objDate.getDate(); //일 구하기 -> 날짜(일)를 나타내는 1에서 31까지의 정수
+
+  let day = objDate.getDay(); //0(일)부터 6(토)까지의 정수값
+  let aryDay = ["일", "월", "화", "수", "목", "금", "토"];
+
+  // 년,월,일,요일 출력
+  // console.log(year+"년"+(month+1)+"월"+date+"일"+aryDay[day]+"요일");
+  let fulldate = `${year}년 ${month+1}월 ${date}일 ${aryDay[day]}요일`;
+  $("#date").text(fulldate);
+
+
+  /* 현재 시간표시하기_________________________ */
+  let $clock = null;
+  $(document).ready(function(){
+    $clock = $("#clock");
+    // 시간 출력 함수 호출
+    clock();
+  })
+
+
+function clock(){
+
+  // showTime() 함수의 시,분,초 값을 addZero()함수를 이용해서 10보다 작은 숫자인 경우만 앞에 "0"문자를 추가하기
+  function addZero(value){
+    // 10보다 작은 경우에만 00문자로 변환
+    if( value < 10 ){
+      value = "0" + value;
+    }
+
+    return value; //데이터를 반환하는 return문: 함수 내부에서 처리한 결과값을 함수 외부로 전달
+  }
+
+
+  // 현재 시간 출력
+  function showTime(){
+    let objTime = new Date(); //객체생성
+    let hours = addZero(objTime.getHours()); //시 정보를 가져옴
+    let minutes = addZero(objTime.getMinutes()); //분 정보를 가져옴
+    let seconds = addZero(objTime.getSeconds()); //초 정보를 가져옴
+
+    // console.log(hours + ":" + minutes + ":" + seconds);
+    let time = `${hours} : ${minutes} : ${seconds}`;
+    $clock.html(time);
+  }
+
+  // 시작하자마자 시간 출력
+  showTime();
+  // 0.5초마다 시간 출력
+  setInterval(function(){
+    showTime();
+  }, 500)
+  
+}
+
+
+
+</script>
+
+
+
+</html>

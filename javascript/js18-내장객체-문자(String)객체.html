@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js18-내장객체-문자(String)객체</title>
+
+</head>
+
+<body>
+  
+</body>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+  // index 0~31(공백포함 총 32개문자)
+  let t = "Hello Thank you good luck to you";
+
+  console.log(t.charAt(16));
+  // 인덱스 16에 저장된 문자를 불러옴 -> "g"
+
+  console.log(t.indexOf("you"));
+  // 문자열 왼쪽에서부터 최초로 발견된 "you"의 인덱스 값을 반환함 -> 12
+
+  console.log(t.indexOf("you",16));
+  // 문자열 인덱스 16위치부터 최초로 발견된 "you"의 인덱스값을 반환함 -> 29
+
+  console.log(t.lastIndexOf("you"));
+  // 문자열 오른쪽에서부터 왼쪽방향으로 "you"의 인덱스값을 반환함 -> 29
+
+  console.log(t.lastIndexOf("you",25));
+  // 문자열 인덱스25부터 왼쪽방향으로 최초로 발견된 "you"의 인덱스값을 반환함 -> 12
+
+  console.log(t.match("luck"));
+  // 문자열 왼쪽에서부터 최초로 발견된 "luck"과 일치되는 문자를 찾아 반환함
+
+  console.log(t.search("you"));
+  // 문자열 왼쪽에서부터 최초로 발견된 "you"의 인덱스값을 반환 -> 12
+  
+  console.log(t.substr(21,4));
+  // 문자열 인덱스 21부터 4글자를 가져옴 -> "luck"
+
+  console.log(t.substring(6,12));
+  // 문자열 인덱스 6부터 12이전까지 문자를 가져옴 -> "Thank"
+
+  console.log(t.replace("you","me"));
+  // 문자열 왼쪽에서부터 최초로 발견된 "you"를 "me"로 치환함
+
+  console.log(t.toLowerCase());
+  // 문자열의 영문자를 모두 소문자로 바뀐 문자열을 반환
+
+  console.log(t.toUpperCase());
+  // 문자열의 영문자를 모두 대문자로 바뀐 문자열을 반환
+
+  console.log(t.length);
+  // 문자열의 문자의 총 개수를 반환 -> 32
+
+  let s = t.split(" ");
+  // 공백문자를 기준으로 문자를 분리함, 분리된 문자열은 배열에 저장되어 s에 할당됨
+
+  console.log(s[0]);
+  // 인덱스 0에 저장된 문자열을 출력 -> "Hello"
+
+  console.log(s[4]);
+  // 인덱스 4에 저장된 문자열을 출력 -> "luck"
+
+
+  
+</script>
+
+
+
+</html>
